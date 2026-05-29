@@ -22,6 +22,7 @@
   <meta property="og:image" content="https://kamalkhanal.info.np/wp-content/uploads/2025/03/kamal-khanal-seo-expert-and-digital-marketer.webp" />
 
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:url" content="https://kamalkhanal.info.np/blog/" />
   <meta name="twitter:title" content="SEO & Digital Marketing Blog – Kamal Khanal" />
   <meta name="twitter:description" content="Practical SEO guides and digital marketing insights from Nepal." />
   <meta name="twitter:image" content="https://kamalkhanal.info.np/wp-content/uploads/2025/03/kamal-khanal-seo-expert-and-digital-marketer.webp" />
@@ -29,6 +30,7 @@
   <meta name="geo.region" content="NP" />
   <meta name="language" content="English" />
   <meta name="theme-color" content="#0A2647" />
+  
   <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png" />
@@ -38,11 +40,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
 
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-M827N69M');</script>
+  <link rel="stylesheet" href="/css/styles.css" />
 
   <script type="application/ld+json">
   {
@@ -65,37 +63,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </script>
 
   <style>
-    :root{
-      --primary:#0A2647; --secondary:#2C7A7B; --accent:#BA1971;
-      --bg:#FFFFFF; --bg-soft:#F8FAFC; --text:#111827; --muted:#4B5563;
-      --border:#E5E7EB; --radius:12px;
-    }
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
-    a{text-decoration:none;color:inherit;}
-    img{display:block;max-width:100%;height:auto;}
-    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
-
-    /* Header */
-    header{background:var(--primary);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(15,23,42,0.15);}
-    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:20px;}
-    .logo{font-weight:700;font-size:20px;}
-    nav ul{display:flex;gap:20px;list-style:none;font-size:14px;}
-    nav a{color:#E5E7EB;}
-    nav a:hover{color:#FACC15;}
-    .btn-primary{padding:9px 20px;border-radius:999px;font-size:14px;font-weight:600;background:var(--accent);color:#fff;}
-    .btn-primary:hover{background:var(--secondary);}
-
-    /* Hamburger & Mobile Menu */
-    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 10px; z-index: 100; }
-    .hamburger span { display: block; width: 25px; height: 3px; margin: 5px 0; background: #ffffff; transition: 0.3s; }
-
-    /* Hero */
+    /* Blog Specific Styles */
     .blog-hero{background:linear-gradient(135deg,#0A2647,#2C7A7B);color:#fff;padding:56px 0 48px;text-align:center;}
     .blog-hero h1{font-size:34px;font-weight:800;margin-bottom:12px;line-height:1.3;}
     .blog-hero p{font-size:16px;color:#E5E7EB;max-width:720px;margin:0 auto 24px;}
 
-    /* Filter Bar */
     .filter-bar{background:var(--bg-soft);border-bottom:1px solid var(--border);padding:20px 0;margin-bottom:40px;position:sticky;top:62px;z-index:40;}
     .filter-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;}
     .filter-categories{display:flex;gap:12px;flex-wrap:wrap;}
@@ -106,10 +78,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .search-box input:focus{outline:none;border-color:var(--accent);}
     .search-icon{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:16px;}
 
-    /* Main Content */
-    main{padding:0 0 60px;}
-
-    /* Blog Grid */
     .blog-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:32px;margin-bottom:48px;}
     .blog-card{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 4px 20px rgba(15,23,42,0.08);transition:transform 0.3s,box-shadow 0.3s;display:flex;flex-direction:column;height:100%;}
     .blog-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(15,23,42,0.15);}
@@ -125,83 +93,43 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .read-more{color:var(--accent);font-weight:600;font-size:14px;display:inline-flex;align-items:center;gap:4px;}
     .read-more:hover{color:var(--secondary);}
 
-    /* CTA Section */
     .cta-section{background:linear-gradient(135deg,#BA1971,#2C7A7B);color:#fff;border-radius:var(--radius);padding:44px 32px;text-align:center;margin-top:60px;}
     .cta-section h2{font-size:26px;font-weight:700;margin-bottom:10px;}
     .cta-section p{font-size:15px;color:#E5E7EB;margin-bottom:22px;max-width:640px;margin-left:auto;margin-right:auto;}
 
-    /* Footer */
-    footer{background:var(--primary);color:#E5E7EB;padding:40px 0 26px;font-size:13px;margin-top:80px;}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-bottom:20px;}
-    footer h4{font-size:14px;margin-bottom:10px;color:#fff;}
-    footer ul{list-style:none;padding:0;}
-    footer li{margin-bottom:6px;}
-    footer a{color:#E5E7EB;}
-    footer a:hover{color:#FACC15;}
-    .footer-bottom{text-align:center;border-top:1px solid rgba(148,163,184,0.35);padding-top:12px;color:#CBD5E1;}
-
-    /* WhatsApp Float */
-    .whatsapp-float{position:fixed;bottom:22px;right:22px;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(37,211,102,0.5);z-index:60;}
-    .whatsapp-float:hover{transform:scale(1.05);}
-    .whatsapp-float svg{width:28px;height:28px;fill:#fff;}
-
-    /* Responsive */
     @media (max-width:900px){
-      .about-hero-grid{grid-template-columns:1fr;gap:30px;}
-      .about-hero h1{font-size:26px;}
-      .about-photo{max-width:100%;}
-      
-      /* Mobile Menu */
-      .hamburger { display: block; }
-      nav ul {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--primary);
-        padding: 20px 0;
-        text-align: center;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-        z-index: 99;
-      }
-      nav ul.active { display: flex; }
-      nav ul li { margin: 15px 0; }
-      header .btn-primary { display: none; }
-      .header-inner { position: relative; }
+      .filter-inner{flex-direction:column;align-items:flex-start;}
+      .search-box{max-width:100%;width:100%;}
     }
   </style>
 </head>
 
 <body>
-  <header role="banner">
-      <div class="container header-inner">
-        <a href="/" class="logo">Kamal Khanal</a>
-        
-        <button class="hamburger" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+<header role="banner">
+  <div class="container header-inner">
+    <a href="/" class="logo">Kamal Khanal</a>
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav role="navigation" aria-label="Main navigation">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/case-studies/">Case Studies</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
+  </div>
+</header>
 
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-        <nav role="navigation" aria-label="Main navigation">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li><a href="/case-studies/">Case Studies</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
-      </div>
-    </header>
 
   <section class="blog-hero" role="banner" aria-labelledby="blog-title">
     <div class="container">
@@ -403,11 +331,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </svg>
   </a>
 
-  <a href="https://wa.me/9779708141147" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
-
-        <script>
+  <script>
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
     if (hamburger && navMenu) {
@@ -417,3 +341,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       });
     }
   </script>
+</body>
+</html>
