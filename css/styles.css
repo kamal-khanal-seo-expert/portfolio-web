@@ -45,35 +45,43 @@ img {
 }
 
 .container {
-  max-width: 1140px; /* Standardized to 1140px */
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
-/* Buttons */
+/* Global Button Styles */
 .btn-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 24px;
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 10px 24px !important;
+  border-radius: 999px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
   background: var(--accent) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 12px rgba(186, 25, 113, 0.3);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  white-space: nowrap;
+  fill: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(186, 25, 113, 0.3) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  white-space: nowrap !important;
   text-decoration: none !important;
 }
 
-.btn-primary:hover {
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active,
+header .btn-primary:hover {
   background: var(--secondary) !important;
   color: #ffffff !important;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(44, 122, 123, 0.4);
+  fill: #ffffff !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 16px rgba(44, 122, 123, 0.4) !important;
+  text-decoration: none !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .btn-outline {
@@ -93,6 +101,7 @@ img {
 .btn-outline:hover {
   background: rgba(255, 255, 255, 0.1);
   border-color: #fff;
+  color: #fff;
 }
 
 /* Header */
@@ -103,14 +112,16 @@ header {
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(15, 23, 42, 0.25);
+  width: 100%;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 0; /* Slightly more padding for better look */
+  padding: 14px 0;
   gap: 20px;
+  height: 72px; /* Fixed height for consistency */
 }
 
 .logo {
@@ -188,7 +199,7 @@ nav a:hover {
   }
   
   header .btn-primary {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -223,7 +234,7 @@ footer li {
 }
 
 footer a:hover {
-  color: #FACC15;
+  color: #FACC15 !important;
 }
 
 .footer-bottom {
