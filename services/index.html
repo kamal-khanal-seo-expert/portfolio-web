@@ -62,10 +62,34 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   </script>
 
-  <link rel="stylesheet" href="/css/styles.css" />
-
   <style>
-    /* Services Specific Styles */
+    :root{
+      --primary:#0A2647; --secondary:#2C7A7B; --accent:#BA1971; --success:#10B981;
+      --bg:#FFFFFF; --bg-soft:#F8FAFC; --text:#111827; --muted:#4B5563;
+      --border:#E5E7EB; --radius:12px;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    /* Smooth scroll for anchor links */
+    html{scroll-behavior:smooth;}
+    body{font-family:'Poppins',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7;}
+    a{text-decoration:none;color:inherit;}
+    img{display:block;max-width:100%;height:auto;}
+    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+
+    /* Header */
+    header{background:var(--primary);color:#fff;position:sticky;top:0;z-index:50;box-shadow:0 2px 10px rgba(15,23,42,0.15);}
+    .header-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 0;gap:20px;}
+    .logo{font-weight:700;font-size:20px;}
+    nav ul{display:flex;gap:20px;list-style:none;font-size:14px;}
+    nav a{color:#E5E7EB;}
+    nav a:hover{color:#FACC15;}
+    /* Button styles removed to use global CSS */
+
+
+        /* Hamburger & Mobile Menu */
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 10px; z-index: 100; }
+    .hamburger span { display: block; width: 25px; height: 3px; margin: 5px 0; background: #ffffff; transition: 0.3s; }
+
     /* Hero */
     .hero{background:linear-gradient(135deg,#0A2647,#2C7A7B);color:#fff;padding:56px 0 48px;text-align:center;}
     .hero h1{font-size:34px;font-weight:800;margin-bottom:12px;line-height:1.3;}
@@ -123,39 +147,76 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .process-step{background:var(--bg-soft);border-radius:var(--radius);padding:24px;text-align:center;}
     .step-number{width:48px;height:48px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:700;margin:0 auto 14px;}
 
+    /* Footer */
+    footer{background:var(--primary);color:#E5E7EB;padding:40px 0 26px;font-size:13px;margin-top:80px;}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:24px;margin-bottom:20px;}
+    footer h4{font-size:14px;margin-bottom:10px;color:#fff;}
+    footer ul{list-style:none;padding:0;}
+    footer li{margin-bottom:6px;}
+    footer a{color:#E5E7EB;}
+    footer a:hover{color:#FACC15;}
+    .footer-bottom{text-align:center;border-top:1px solid rgba(148,163,184,0.35);padding-top:12px;color:#CBD5E1;}
+
+    /* WhatsApp Float */
+    .whatsapp-float{position:fixed;bottom:22px;right:22px;width:54px;height:54px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(37,211,102,0.5);z-index:60;}
+    .whatsapp-float:hover{transform:scale(1.05);}
+    .whatsapp-float svg{width:28px;height:28px;fill:#fff;}
+
     /* Responsive */
     @media (max-width:900px){
       .about-hero-grid{grid-template-columns:1fr;gap:30px;}
       .about-hero h1{font-size:26px;}
       .about-photo{max-width:100%;}
+      
+      /* Mobile Menu */
+      .hamburger { display: block; }
+      nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary);
+        padding: 20px 0;
+        text-align: center;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        z-index: 99;
+      }
+      nav ul.active { display: flex; }
+      nav ul li { margin: 15px 0; }
+      header .btn-primary { display: none; }
+      .header-inner { position: relative; }
     }
   </style>
 </head>
 
 <body>
-<header role="banner">
-  <div class="container header-inner">
-    <a href="/" class="logo">Kamal Khanal</a>
-    <button class="hamburger" aria-label="Toggle navigation">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <nav role="navigation" aria-label="Main navigation">
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about/">About</a></li>
-        <li><a href="/services/">Services</a></li>
-        <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
-        <li><a href="/blog/">Blog</a></li>
-        <li><a href="/case-studies/">Case Studies</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
-  </div>
-</header>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
+  <header role="banner">
+      <div class="container header-inner">
+        <a href="/" class="logo">Kamal Khanal</a>
+        
+        <button class="hamburger" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <nav role="navigation" aria-label="Main navigation">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about/">About</a></li>
+            <li><a href="/services/">Services</a></li>
+            <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
+            <li><a href="/blog/">Blog</a></li>
+            <li><a href="/case-studies/">Case Studies</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
+      </div>
+    </header>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <section class="hero" role="banner" aria-labelledby="hero-title">
@@ -272,7 +333,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>Content and entity gap analysis</li>
             <li>Prioritized action plan</li>
           </ul>
-          <a href="#contact" class="btn-primary">Get Started</a>
+          <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;">Get Started</a>
         </div>
         <div class="pricing-card featured">
           <span class="pricing-tag">Most Popular</span>
@@ -283,7 +344,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>Content creation & optimization</li>
             <li>Link building included</li>
           </ul>
-          <a href="#contact" class="btn-primary">Get Started</a>
+          <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;">Get Started</a>
         </div>
         <div class="pricing-card">
           <span class="pricing-tag">Enterprise</span>
@@ -294,7 +355,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <li>International SEO</li>
             <li>Dedicated support</li>
           </ul>
-          <a href="#contact" class="btn-primary">Contact Me</a>
+          <a href="#contact" class="btn-primary" style="width:100%;justify-content:center;">Contact Me</a>
         </div>
       </div>
     </section>
