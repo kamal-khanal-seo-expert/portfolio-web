@@ -1,6 +1,6 @@
 /* 
   Kamal Khanal - Master Stylesheet 
-  Professional, Clean, and Spacious
+  Professional, Spacious, and High-Contrast
 */
 
 :root {
@@ -11,20 +11,20 @@
   --success: #10B981;
   --warning: #FACC15;
   --error: #EF4444;
-  
+
   /* Neutral */
   --bg: #FFFFFF;
   --bg-soft: #F8FAFC;
   --text: #111827;
   --muted: #4B5563;
   --border: #E5E7EB;
-  
+
   /* Spacing & Radius */
   --radius: 12px;
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
-  
+
   /* Shadows */
   --shadow-sm: 0 4px 12px rgba(15, 23, 42, 0.08);
   --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.12);
@@ -417,6 +417,19 @@ footer a:hover { color: var(--warning); }
   list-style: none;
 }
 
+.breadcrumb-list a {
+  color: var(--muted);
+}
+
+.breadcrumb-list a:hover {
+  color: var(--accent);
+}
+
+.breadcrumb-current {
+  color: var(--primary);
+  font-weight: 600;
+}
+
 .toc {
   background: #fff;
   border: 1px solid var(--border);
@@ -432,6 +445,11 @@ footer a:hover { color: var(--warning); }
   margin-bottom: 20px;
   border-bottom: 1px solid var(--border);
   padding-bottom: 12px;
+  color: var(--primary);
+}
+
+.toc-list {
+  list-style: none;
 }
 
 .toc-list a {
@@ -439,12 +457,25 @@ footer a:hover { color: var(--warning); }
   padding: 6px 0;
   font-size: 15px;
   color: var(--text);
+  font-weight: 500;
 }
 
 .toc-list a:hover {
   color: var(--accent);
   padding-left: 8px;
 }
+
+/* Article/Blog Styling */
+.article-header { padding: 60px 0 40px; text-align: center; }
+.article-content { max-width: 800px; margin: 0 auto; }
+.article-content h2 { margin: 40px 0 20px; color: var(--primary); }
+.article-content p { font-size: 17px; color: var(--text); }
+
+/* Results Section */
+.results-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 30px; }
+.result { text-align: center; padding: 40px; background: var(--bg-soft); border-radius: var(--radius); border-bottom: 4px solid var(--secondary); transition: 0.3s; }
+.result strong { display: block; font-size: 42px; color: var(--accent); margin-bottom: 10px; }
+.result span { color: var(--muted); }
 
 /* Skip Link */
 .skip-link {
@@ -460,4 +491,27 @@ footer a:hover { color: var(--warning); }
 
 .skip-link:focus {
   top: 0;
+}
+
+/* Additional layout fixes for homepage specific items if any */
+#services .grid-3 {
+  margin-top: 40px;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+/* Final Master Button Hover Fix */
+.btn-primary:hover, .btn-primary:active {
+  color: #ffffff !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
