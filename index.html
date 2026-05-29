@@ -164,6 +164,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 <header role="banner">
   <div class="container header-inner">
     <a href="/" class="logo">Kamal Khanal</a>
@@ -189,12 +190,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <main>
+  <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div>
-          <p class="hero-label">SEO Expert in Nepal · Technical & Entity SEO · GEO / AEO Ready</p>
-          <h1 id="hero-title" class="hero-title">
+          <p class="hero-label" style="display: inline-block; padding: 6px 16px; border: 1px solid var(--secondary); border-radius: 999px; color: var(--secondary); font-size: 13px; font-weight: 600; margin-bottom: 16px;">SEO Expert in Nepal · Technical & Entity SEO · GEO / AEO Ready</p>
+          <h1 id="hero-title" class="hero-title" style="font-size: clamp(32px, 5vw, 52px); font-weight: 800; line-height: 1.2; margin-bottom: 20px;">
             Kamal Khanal: SEO Expert in Nepal Driving AI & Google Search Growth
           </h1>
           <p class="hero-lede">
@@ -206,14 +207,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             growth instead of short-term hacks.
           </p>
           <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Get a Free Technical & Entity SEO Audit</a>
+            <a href="/contact/" class="btn-primary">Get a Free Technical & Entity SEO Audit</a>
             <a href="#results" class="btn-outline">See How Results Look in Practice</a>
           </div>
           <div class="hero-stats">
-            <div class="stat"><strong>500+</strong><span>Keywords top 10</span></div>
-            <div class="stat"><strong>3.2×</strong><span>Traffic growth</span></div>
-            <div class="stat"><strong>30+</strong><span>Projects</span></div>
+            <div class="stat">
+              <strong>500+</strong><span>Keywords top 10</span>
+              <span style="display:block; font-size: 11px; opacity: 0.8; margin-top: 4px;">across all client accounts</span>
+            </div>
+            <div class="stat">
+              <strong>3.2×</strong><span>Traffic growth</span>
+              <span style="display:block; font-size: 11px; opacity: 0.8; margin-top: 4px;">average in first 12 months</span>
+            </div>
+            <div class="stat">
+              <strong>30+</strong><span>Projects</span>
+              <span style="display:block; font-size: 11px; opacity: 0.8; margin-top: 4px;">since 2021</span>
+            </div>
           </div>
+          <p style="font-size: 11px; opacity: 0.6; margin-top: 10px;">* Based on aggregated client data.</p>
         </div>
         <aside class="hero-media" aria-label="Photo and summary of Kamal Khanal">
           <div class="hero-photo">
@@ -285,36 +296,76 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
  
-        <section class="featured-tool-banner">
-      <div class="container" style="text-align: center; padding: 30px 20px; background: linear-gradient(90deg, #BA1971 0%, #2C7A7B 100%); color: #fff; border-radius: var(--radius-md); margin-top: 30px;">
-        <p style="font-size: 24px; margin-bottom: 15px;">New: Free Semantic Keyword Clusterer!</p>
-        <p style="font-size: 16px; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto;">Organize your keywords into powerful semantic clusters for better SEO performance.</p>
-        <a href="/tools/keyword-clusterer/" class="btn-primary">Try the Keyword Clusterer</a>
+        <section id="tool-banner-section" style="display: none;">
+      <div class="container">
+        <div id="tool-banner" style="background: #E0F2FE; color: #0F172A; border-radius: var(--radius-md); padding: 16px 20px; display: flex; flex-wrap: wrap; gap: 15px; justify-content: space-between; align-items: center; margin: 40px auto 0; max-width: 900px; border: 1px solid #BAE6FD; position: relative;">
+          <div>
+            <strong style="font-size: 16px; display: block; color: #0A2647;">New: Free Semantic Keyword Clusterer</strong>
+            <span style="font-size: 14px; opacity: 0.8;">Organize your keywords into powerful semantic clusters for better SEO.</span>
+          </div>
+          <div style="display: flex; align-items: center; gap: 15px;">
+            <a href="/tools/keyword-clusterer/" class="btn-primary" style="padding: 6px 16px; font-size: 13px;">Try the Tool</a>
+            <button id="close-banner" style="background: transparent; border: none; cursor: pointer; font-size: 20px; color: #0F172A; line-height: 1; padding: 4px;" aria-label="Close announcement">&times;</button>
+          </div>
+        </div>
       </div>
+      <script>
+        if (!localStorage.getItem('toolBannerDismissed')) {
+          document.getElementById('tool-banner-section').style.display = 'block';
+        }
+        document.getElementById('close-banner').addEventListener('click', function() {
+          document.getElementById('tool-banner-section').style.display = 'none';
+          localStorage.setItem('toolBannerDismissed', 'true');
+        });
+      </script>
     </section>
 
-    <section id="process" aria-labelledby="process-title">
+    <section id="process" aria-labelledby="process-title" style="padding-top: 60px;">
       <div class="container">
         <div class="section-header">
           <p class="section-eyebrow">Process</p>
           <h2 id="process-title" class="section-title">A Process Built for Algorithms and Humans</h2>
           <p class="section-sub">Clear phases that work both for classic SEO signals and for AI-driven discovery.</p>
         </div>
-        <div class="grid-3">
-          <article class="card">
-            <span class="pill">Phase 1 · Audit</span>
-            <h3>Technical, Entity & Content Audit</h3>
-            <p>Understand how search engines and AI systems currently see your site: technical gaps and entity coverage.</p>
+        
+        <style>
+          .process-wrapper { display: flex; flex-direction: column; gap: 30px; position: relative; }
+          .process-step { position: relative; padding-left: 40px; }
+          .process-step::before { content: ''; position: absolute; left: 11px; top: 40px; bottom: -30px; border-left: 2px dashed var(--border); z-index: 1; }
+          .process-step:last-child::before { display: none; }
+          .process-step-badge { position: absolute; left: 0; top: 0; width: 24px; height: 24px; background: var(--primary); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; z-index: 2; }
+          @media(min-width: 768px) {
+            .process-wrapper { flex-direction: row; gap: 20px; }
+            .process-step { flex: 1; padding-left: 0; padding-top: 40px; }
+            .process-step::before { top: 11px; left: 30px; right: -20px; bottom: auto; height: 2px; border-left: none; border-top: 2px dashed var(--border); width: 100%; }
+            .process-step-badge { left: 0; }
+          }
+        </style>
+        
+        <div class="process-wrapper">
+          <article class="process-step">
+            <div class="process-step-badge">1</div>
+            <strong style="display:block; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); margin-bottom: 4px;">Phase 1 · Audit</strong>
+            <h3 style="font-size: 18px; margin-bottom: 8px;">Technical & Entity Audit</h3>
+            <p style="font-size: 14px;">Understand how search engines and AI systems see your site.</p>
           </article>
-          <article class="card">
-            <span class="pill">Phase 2 · Strategy</span>
-            <h3>SEO Roadmap & Topic Architecture</h3>
-            <p>Translate audit insights into a roadmap: keyword targeting, content clusters, and a Core Web Vitals plan.</p>
+          <article class="process-step">
+            <div class="process-step-badge">2</div>
+            <strong style="display:block; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); margin-bottom: 4px;">Phase 2 · Strategy</strong>
+            <h3 style="font-size: 18px; margin-bottom: 8px;">Roadmap Architecture</h3>
+            <p style="font-size: 14px;">Translate audit insights into a roadmap for clusters and Core Web Vitals.</p>
           </article>
-          <article class="card">
-            <span class="pill">Phase 3 · Execution</span>
-            <h3>Implementation, Testing & Iteration</h3>
-            <p>Implement technical fixes, publish content, refine internal links, and continually adjust.</p>
+          <article class="process-step">
+            <div class="process-step-badge">3</div>
+            <strong style="display:block; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); margin-bottom: 4px;">Phase 3 · Execution</strong>
+            <h3 style="font-size: 18px; margin-bottom: 8px;">Implementation</h3>
+            <p style="font-size: 14px;">Implement fixes, publish content, and refine internal links.</p>
+          </article>
+          <article class="process-step">
+            <div class="process-step-badge">4</div>
+            <strong style="display:block; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--secondary); margin-bottom: 4px;">Phase 4 · Reporting</strong>
+            <h3 style="font-size: 18px; margin-bottom: 8px;">Ongoing Adjustments</h3>
+            <p style="font-size: 14px;">Monthly performance reports and ongoing recommendations.</p>
           </article>
         </div>
       </div>
@@ -327,18 +378,36 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <h2 id="testimonials-title" class="section-title">What Clients Say</h2>
           <p class="section-sub">Feedback from teams that wanted SEO to be a dependable growth lever.</p>
         </div>
-        <div class="grid-3">
-          <article class="testimonial">
-            <p>“Kamal’s technical audit highlighted issues we did not know existed. Fixing them, plus his content plan, gave us a 280% lift.”</p>
-            <strong>Rajesh Sharma</strong><span>CEO · B2B SaaS Company</span>
+        <div class="grid-3" style="align-items: stretch;">
+          <article class="testimonial" style="background: var(--bg-soft); border-left: 4px solid var(--secondary); padding: 24px; border-radius: var(--radius-sm); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <p style="font-style: italic; margin-bottom: 20px;">“Kamal’s technical audit highlighted issues we did not know existed. Fixing them, plus his content plan, gave us a 280% lift.”</p>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">RS</div>
+              <div>
+                <strong style="display: block; font-size: 15px; line-height: 1.2;">Rajesh Sharma</strong>
+                <span style="font-size: 13px; color: var(--muted);">CEO · B2B SaaS Company</span>
+              </div>
+            </div>
           </article>
-          <article class="testimonial">
-            <p>“Our local rankings improved fast, and the calls from Google Maps and search are now a steady source of customers.”</p>
-            <strong>Priya Thapa</strong><span>Owner · Local Retail Brand</span>
+          <article class="testimonial" style="background: var(--bg-soft); border-left: 4px solid var(--secondary); padding: 24px; border-radius: var(--radius-sm); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <p style="font-style: italic; margin-bottom: 20px;">“Our local rankings improved fast, and the calls from Google Maps and search are now a steady source of customers.”</p>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">PT</div>
+              <div>
+                <strong style="display: block; font-size: 15px; line-height: 1.2;">Priya Thapa</strong>
+                <span style="font-size: 13px; color: var(--muted);">Owner · Local Retail Brand</span>
+              </div>
+            </div>
           </article>
-          <article class="testimonial">
-            <p>“He helped us move from random articles to a solid topic map. We now have clear pillars and supporting content.”</p>
-            <strong>Amit Gurung</strong><span>Founder · E-commerce Brand</span>
+          <article class="testimonial" style="background: var(--bg-soft); border-left: 4px solid var(--secondary); padding: 24px; border-radius: var(--radius-sm); display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+            <p style="font-style: italic; margin-bottom: 20px;">“He helped us move from random articles to a solid topic map. We now have clear pillars and supporting content.”</p>
+            <div style="display: flex; align-items: center; gap: 12px; margin-top: auto;">
+              <div style="width: 40px; height: 40px; border-radius: 50%; background: var(--primary); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 14px;">AG</div>
+              <div>
+                <strong style="display: block; font-size: 15px; line-height: 1.2;">Amit Gurung</strong>
+                <span style="font-size: 13px; color: var(--muted);">Founder · E-commerce Brand</span>
+              </div>
+            </div>
           </article>
         </div>
       </div>
@@ -414,14 +483,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </section>
   </main>
+
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-      <div>
+      <div class="footer-col">
         <p class="footer-title">About Kamal Khanal</p>
         <p>SEO specialist in Nepal focused on technical SEO, entity optimization, and sustainable organic growth strategies for businesses worldwide.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/kamalkhanal" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/seo_kamalkhanal" target="_blank" rel="noopener">Twitter</a>
+        </div>
       </div>
-      <div>
+      <div class="footer-col">
         <p class="footer-title">Quick Links</p>
         <ul>
           <li><a href="/">Home</a></li>
@@ -429,10 +503,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/services/">Services</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/case-studies/">Case Studies</a></li>
-          <li><a href="/#contact">Get Free Audit</a></li>
+          <li><a href="/contact/">Get Free Audit</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <p class="footer-title">Core Services</p>
         <ul>
           <li><a href="/services/#technical-seo">Technical SEO</a></li>
@@ -442,32 +516,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/services/#content-strategy">Content Strategy</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <p class="footer-title">Contact</p>
-        <p>Email:<br><a href="mailto:seo-expert@kamalkhanal.info.np">seo-expert@kamalkhanal.info.np</a></p>
-        <p>Phone / WhatsApp:<br><a href="https://wa.me/9779708141147">+977 970-8141147</a></p>
-        <p>Location: Nepal</p>
-        <p style="margin-top:10px;">
-          <a href="https://www.linkedin.com/in/kamalkhanal" target="_blank" rel="noopener">LinkedIn</a> · 
-          <a href="https://x.com/seo_kamalkhanal" target="_blank" rel="noopener">Twitter</a>
-        </p>
+        <ul>
+          <li>Email: <a href="mailto:seo-expert@kamalkhanal.info.np">seo-expert@kamalkhanal.info.np</a></li>
+          <li>Phone: <a href="https://wa.me/9779708141147">+977 970-8141147</a></li>
+          <li>Location: Lalitpur, Nepal</li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">© 2026 Kamal Khanal – SEO Specialist in Nepal. All rights reserved.</div>
   </div>
-</footer>
+</footer>>
 
-  <a
-    href="https://wa.me/9779708141147"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat on WhatsApp with Kamal Khanal"
-  >
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
-    </svg>
-  </a>
+  
+  <div class="whatsapp-container">
+    <span class="whatsapp-label">Chat on WhatsApp</span>
+    <a href="https://wa.me/9779708141147" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32">
+        <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
+      </svg>
+    </a>
+  </div>
 
   <script>
     const hamburger = document.querySelector('.hamburger');

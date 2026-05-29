@@ -42,6 +42,7 @@
 </head>
 
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
 <header role="banner">
   <div class="container header-inner">
     <a href="/" class="logo">Kamal Khanal</a>
@@ -77,62 +78,135 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <main class="container">
-    <div class="grid-3" role="list" aria-label="Blog posts" style="margin-top: 80px;">
+  <main id="main" class="container">
+    <div style="margin-top: 60px; margin-bottom: 40px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+      <div style="width: 100%; max-width: 500px; position: relative;">
+        <input type="text" id="blog-search" placeholder="Search articles by title..." style="width: 100%; padding: 12px 20px 12px 40px; border-radius: 999px; border: 1px solid var(--border); font-family: inherit; font-size: 15px;" />
+        <svg style="position: absolute; left: 14px; top: 50%; transform: translateY(-50%); color: var(--muted);" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;" id="blog-filters">
+        <button class="pill active" style="background: var(--primary); color: #fff; border: 1px solid var(--primary); padding: 6px 16px; border-radius: 999px; cursor: pointer; font-size: 13px;">All</button>
+        <button class="pill" style="background: transparent; color: var(--text); border: 1px solid var(--border); padding: 6px 16px; border-radius: 999px; cursor: pointer; font-size: 13px;">Technical SEO</button>
+        <button class="pill" style="background: transparent; color: var(--text); border: 1px solid var(--border); padding: 6px 16px; border-radius: 999px; cursor: pointer; font-size: 13px;">Content Strategy</button>
+        <button class="pill" style="background: transparent; color: var(--text); border: 1px solid var(--border); padding: 6px 16px; border-radius: 999px; cursor: pointer; font-size: 13px;">Local SEO</button>
+        <button class="pill" style="background: transparent; color: var(--text); border: 1px solid var(--border); padding: 6px 16px; border-radius: 999px; cursor: pointer; font-size: 13px;">Tools</button>
+      </div>
+    </div>
+
+    <div class="grid-3" role="list" aria-label="Blog posts" id="blog-grid">
       
-      <article class="card" itemscope itemtype="https://schema.org/BlogPosting" role="listitem">
-        <div class="card-image" style="margin: -32px -32px 24px; height: 200px; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0;">
-          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="SEO Studio Tools" style="width: 100%; height: 100%; object-fit: cover;">
+      <article class="card blog-post" data-category="tools" itemscope itemtype="https://schema.org/BlogPosting" role="listitem" style="display: flex; flex-direction: column;">
+        <div class="card-image" style="margin: -32px -32px 24px; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; position: relative;">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Dashboard showing SEO Studio Tools" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px;">Last updated: Jan 2026</span>
         </div>
         <div class="blog-meta" style="font-size: 12px; color: var(--muted); margin-bottom: 10px;">
-          <span>📅 Jan 15, 2025</span> · <span>⏱ 8 min read</span>
+          <span>📅 Jan 15, 2026</span> · <span>⏱ 8 min read</span>
         </div>
-        <h3 itemprop="headline"><a href="/blog/seo-studio-tools/">SEO Studio Tools: 20+ Essential SEO Tools for 2026</a></h3>
-        <p itemprop="description">Discover the essential SEO tools every digital marketer needs in 2026. From technical audits to keyword research.</p>
-        <a href="/blog/seo-studio-tools/" class="btn-primary" style="margin-top: auto;">Read Full Guide</a>
+        <h3 itemprop="headline" class="post-title"><a href="/blog/seo-studio-tools/">SEO Studio Tools: 20+ Essential SEO Tools for 2026</a></h3>
+        <p itemprop="description" style="flex-grow: 1;">Discover the essential SEO tools every digital marketer needs in 2026. From technical audits to keyword research.</p>
+        <a href="/blog/seo-studio-tools/" class="btn-primary" style="margin-top: 15px; align-self: flex-start;">Read Full Guide</a>
       </article>
 
-      <article class="card" itemscope itemtype="https://schema.org/BlogPosting" role="listitem">
-        <div class="card-image" style="margin: -32px -32px 24px; height: 200px; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0;">
-          <img src="https://kamalkhanal.info.np/assets/content-marketing-in-nepal.jpg" alt="Content Marketing in Nepal" style="width: 100%; height: 100%; object-fit: cover;">
+      <article class="card blog-post" data-category="content strategy" itemscope itemtype="https://schema.org/BlogPosting" role="listitem" style="display: flex; flex-direction: column;">
+        <div class="card-image" style="margin: -32px -32px 24px; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; position: relative;">
+          <img src="https://kamalkhanal.info.np/assets/content-marketing-in-nepal.jpg" alt="Content Marketing in Nepal with coffee and laptop" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px;">Last updated: Jan 2026</span>
         </div>
         <div class="blog-meta" style="font-size: 12px; color: var(--muted); margin-bottom: 10px;">
-          <span>📅 Jan 10, 2025</span> · <span>⏱ 10 min read</span>
+          <span>📅 Jan 10, 2026</span> · <span>⏱ 10 min read</span>
         </div>
-        <h3 itemprop="headline"><a href="/blog/content-marketing-in-nepal/">Content Marketing in Nepal: 2026 Strategy Guide</a></h3>
-        <p itemprop="description">Learn proven content marketing strategies tailored for Nepal's unique market in 2026.</p>
-        <a href="/blog/content-marketing-in-nepal/" class="btn-primary" style="margin-top: auto;">Read Full Guide</a>
+        <h3 itemprop="headline" class="post-title"><a href="/blog/content-marketing-in-nepal/">Content Marketing in Nepal: 2026 Strategy Guide</a></h3>
+        <p itemprop="description" style="flex-grow: 1;">Learn proven content marketing strategies tailored for Nepal's unique market in 2026.</p>
+        <a href="/blog/content-marketing-in-nepal/" class="btn-primary" style="margin-top: 15px; align-self: flex-start;">Read Full Guide</a>
       </article>
 
-      <article class="card" itemscope itemtype="https://schema.org/BlogPosting" role="listitem">
-        <div class="card-image" style="margin: -32px -32px 24px; height: 200px; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0;">
-          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Best SEO Expert in Nepal" style="width: 100%; height: 100%; object-fit: cover;">
+      <article class="card blog-post" data-category="local seo" itemscope itemtype="https://schema.org/BlogPosting" role="listitem" style="display: flex; flex-direction: column;">
+        <div class="card-image" style="margin: -32px -32px 24px; aspect-ratio: 16/9; overflow: hidden; border-radius: var(--radius) var(--radius) 0 0; position: relative;">
+          <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Person giving an SEO presentation" loading="lazy" style="width: 100%; height: 100%; object-fit: cover;">
+          <span style="position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.7); color: #fff; font-size: 11px; padding: 4px 8px; border-radius: 4px;">Last updated: Jan 2026</span>
         </div>
         <div class="blog-meta" style="font-size: 12px; color: var(--muted); margin-bottom: 10px;">
-          <span>📅 Jan 5, 2025</span> · <span>⏱ 12 min read</span>
+          <span>📅 Jan 5, 2026</span> · <span>⏱ 12 min read</span>
         </div>
-        <h3 itemprop="headline"><a href="/blog/best-seo-expert-in-nepal/">Best SEO Expert in Nepal 2026: Complete Hiring Guide</a></h3>
-        <p itemprop="description">A practical guide to hiring an SEO specialist in Nepal. Learn what questions to ask and evaluate expertise.</p>
-        <a href="/blog/best-seo-expert-in-nepal/" class="btn-primary" style="margin-top: auto;">Read Full Guide</a>
+        <h3 itemprop="headline" class="post-title"><a href="/blog/best-seo-expert-in-nepal/">Best SEO Expert in Nepal 2026: Complete Hiring Guide</a></h3>
+        <p itemprop="description" style="flex-grow: 1;">A practical guide to hiring an SEO specialist in Nepal. Learn what questions to ask and evaluate expertise.</p>
+        <a href="/blog/best-seo-expert-in-nepal/" class="btn-primary" style="margin-top: 15px; align-self: flex-start;">Read Full Guide</a>
       </article>
 
     </div>
 
+    <div style="display: flex; justify-content: center; gap: 8px; margin-top: 40px; margin-bottom: 80px;" id="blog-pagination">
+      <button style="width: 36px; height: 36px; border-radius: 4px; border: none; background: var(--primary); color: #fff; font-weight: bold; cursor: pointer;">1</button>
+      <button style="width: 36px; height: 36px; border-radius: 4px; border: 1px solid var(--border); background: #fff; color: var(--text); cursor: pointer;">2</button>
+      <button style="width: 36px; height: 36px; border-radius: 4px; border: 1px solid var(--border); background: #fff; color: var(--text); cursor: pointer;">&raquo;</button>
+    </div>
+
+    <script>
+      // Simple client-side search and filter
+      const searchInput = document.getElementById('blog-search');
+      const filterBtns = document.querySelectorAll('#blog-filters button');
+      const posts = document.querySelectorAll('.blog-post');
+
+      function filterPosts() {
+        const query = searchInput.value.toLowerCase();
+        const activeFilter = document.querySelector('#blog-filters .active').textContent.toLowerCase();
+
+        posts.forEach(post => {
+          const title = post.querySelector('.post-title').textContent.toLowerCase();
+          const category = post.getAttribute('data-category').toLowerCase();
+          
+          const matchesSearch = title.includes(query);
+          const matchesFilter = activeFilter === 'all' || category === activeFilter;
+
+          if (matchesSearch && matchesFilter) {
+            post.style.display = 'flex';
+          } else {
+            post.style.display = 'none';
+          }
+        });
+      }
+
+      searchInput.addEventListener('input', filterPosts);
+      
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          filterBtns.forEach(b => {
+            b.classList.remove('active');
+            b.style.background = 'transparent';
+            b.style.color = 'var(--text)';
+            b.style.border = '1px solid var(--border)';
+          });
+          const target = e.target;
+          target.classList.add('active');
+          target.style.background = 'var(--primary)';
+          target.style.color = '#fff';
+          target.style.border = '1px solid var(--primary)';
+          filterPosts();
+        });
+      });
+    </script>
+
     <section class="card" style="text-align:center; margin: 80px 0; background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff;">
       <h2 style="color: #fff; margin-bottom: 16px;">Want SEO Strategies Customized for Your Business?</h2>
       <p style="color: #E5E7EB; margin-bottom: 30px;">Let's talk about your specific challenges and build a strategy that fits your goals.</p>
-      <a href="/services/#contact" class="btn-primary" style="background: var(--warning) !important; color: var(--primary) !important;">Get Your Free SEO Audit</a>
+      <a href="/contact/" class="btn-primary" style="background: var(--warning) !important; color: var(--primary) !important;">Get Your Free SEO Audit</a>
     </section>
   </main>
+
 
 <footer role="contentinfo">
   <div class="container">
     <div class="footer-grid">
-      <div>
+      <div class="footer-col">
         <p class="footer-title">About Kamal Khanal</p>
         <p>SEO specialist in Nepal focused on technical SEO, entity optimization, and sustainable organic growth strategies for businesses worldwide.</p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/kamalkhanal" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://x.com/seo_kamalkhanal" target="_blank" rel="noopener">Twitter</a>
+        </div>
       </div>
-      <div>
+      <div class="footer-col">
         <p class="footer-title">Quick Links</p>
         <ul>
           <li><a href="/">Home</a></li>
@@ -140,10 +214,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/services/">Services</a></li>
           <li><a href="/blog/">Blog</a></li>
           <li><a href="/case-studies/">Case Studies</a></li>
-          <li><a href="/#contact">Get Free Audit</a></li>
+          <li><a href="/contact/">Get Free Audit</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <p class="footer-title">Core Services</p>
         <ul>
           <li><a href="/services/#technical-seo">Technical SEO</a></li>
@@ -153,32 +227,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <li><a href="/services/#content-strategy">Content Strategy</a></li>
         </ul>
       </div>
-      <div>
+      <div class="footer-col">
         <p class="footer-title">Contact</p>
-        <p>Email:<br><a href="mailto:seo-expert@kamalkhanal.info.np">seo-expert@kamalkhanal.info.np</a></p>
-        <p>Phone / WhatsApp:<br><a href="https://wa.me/9779708141147">+977 970-8141147</a></p>
-        <p>Location: Nepal</p>
-        <p style="margin-top:10px;">
-          <a href="https://www.linkedin.com/in/kamalkhanal" target="_blank" rel="noopener">LinkedIn</a> · 
-          <a href="https://x.com/seo_kamalkhanal" target="_blank" rel="noopener">Twitter</a>
-        </p>
+        <ul>
+          <li>Email: <a href="mailto:seo-expert@kamalkhanal.info.np">seo-expert@kamalkhanal.info.np</a></li>
+          <li>Phone: <a href="https://wa.me/9779708141147">+977 970-8141147</a></li>
+          <li>Location: Lalitpur, Nepal</li>
+        </ul>
       </div>
     </div>
     <div class="footer-bottom">© 2026 Kamal Khanal – SEO Specialist in Nepal. All rights reserved.</div>
   </div>
-</footer>
+</footer>>
 
-  <a
-    href="https://wa.me/9779708141147"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener"
-    aria-label="Chat on WhatsApp with Kamal Khanal"
-  >
-    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
-    </svg>
-  </a>
+  
+  <div class="whatsapp-container">
+    <span class="whatsapp-label">Chat on WhatsApp</span>
+    <a href="https://wa.me/9779708141147" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32">
+        <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
+      </svg>
+    </a>
+  </div>
 
   <script>
     const hamburger = document.querySelector('.hamburger');
