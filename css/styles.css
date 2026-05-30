@@ -275,7 +275,7 @@ cite { display: block; margin-top: 12px; font-style: normal; font-weight: 700; c
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 440px;
+  max-width: 580px; /* Increased from 440px */
   aspect-ratio: 1/1;
   display: flex;
   align-items: center;
