@@ -47,12 +47,6 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-M827N69M');</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -82,56 +76,45 @@
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <section class="hero">
-        <div class="container hero-layout">
-          <div class="hero-text">
-            <span class="pill">Free SEO Tool</span>
-            <h1 class="section-title">Semantic Keyword <span class="text-gradient">Clusterer</span></h1>
-            <p class="hero-description">Group thousands of keywords by intent and topic in seconds. 100% Client-Side Privacy.</p>
-            <div class="hero-actions">
-              <a href="#main" class="btn-primary">Start Clustering</a>
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">Free SEO Tool</span>
+                <h1 class="section-title">Semantic Keyword Clusterer</h1>
+                <p class="section-sub">Group thousands of keywords by intent and topic in seconds. 100% Client-Side Privacy.</p>
             </div>
-          </div>
-          <aside class="hero-visual">
-            <div class="hero-photo-wrapper">
-              <div class="hero-photo">
-                <img src="/assets/nepali-entrepreneur-content-marketing.webp" width="1200" height="1200" alt="Semantic Keyword Clustering Tool" />
-              </div>
-            </div>
-          </aside>
         </div>
     </section>
 
-    <main id="main">
-      <div class="container">
+    <main id="main" class="container">
         
-        <section class="card control-panel" style="margin-top: -60px; position: relative; z-index: 10;">
+        <section class="card control-panel">
             <div class="grid-2">
                 <div class="input-section">
-                    <label for="keywordInput" class="section-label" style="font-weight: 700; color: var(--primary); display: block; margin-bottom: 15px;">1. Enter Keywords (or Import CSV)</label>
-                    <textarea id="keywordInput" placeholder="Paste your keyword list here (one per line)...&#10;best running shoes&#10;cheap running shoes&#10;seo audit nepal&#10;..." style="width: 100%; min-height: 200px; padding: 15px; border-radius: 8px; border: 1px solid var(--border); font-family: inherit;"></textarea>
+                    <label for="keywordInput" class="section-label">1. Enter Keywords (or Import CSV)</label>
+                    <textarea id="keywordInput" placeholder="Paste your keyword list here (one per line)...&#10;best running shoes&#10;cheap running shoes&#10;seo audit nepal&#10;..."></textarea>
                     
-                    <div class="file-actions" style="margin-top: 15px; display: flex; align-items: center; gap: 15px;">
+                    <div class="file-actions">
                         <button class="btn-outline" onclick="document.getElementById('csvUpload').click()">📂 Import CSV</button>
                         <input type="file" id="csvUpload" accept=".csv" style="display:none">
-                        <span id="fileStats" class="stats-text" style="font-size: 0.85rem; color: var(--text-muted);">0 keywords loaded</span>
+                        <span id="fileStats" class="stats-text">0 keywords loaded</span>
                     </div>
                 </div>
 
                 <div class="settings-section">
-                    <label class="section-label" style="font-weight: 700; color: var(--primary); display: block; margin-bottom: 15px;">2. Clustering Settings</label>
+                    <label class="section-label">2. Clustering Settings</label>
                     
-                    <div class="setting-group" style="margin-bottom: 20px;">
-                        <label style="display: block; font-size: 0.9rem; margin-bottom: 8px;">Cluster Strictness (Word Match)</label>
-                        <select id="clusterLevel" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border);">
+                    <div class="setting-group">
+                        <label>Cluster Strictness (Word Match)</label>
+                        <select id="clusterLevel">
                             <option value="high">High (Needs 3+ shared words)</option>
                             <option value="medium" selected>Medium (Needs 2+ shared words)</option>
                             <option value="low">Low (Needs 1 shared word)</option>
                         </select>
                     </div>
 
-                    <div class="setting-group" style="margin-bottom: 20px;">
-                        <label style="display: block; font-size: 0.9rem; margin-bottom: 8px;">Geography / Language</label>
-                        <select id="languageGeo" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--border);">
+                    <div class="setting-group">
+                        <label>Geography / Language</label>
+                        <select id="languageGeo">
                             <option value="en-us">English (Global/US)</option>
                             <option value="ne-np">Nepali (Nepal)</option>
                         </select>
@@ -157,43 +140,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <section>
-          <article class="card seo-guide" style="margin-top: 80px; border-left: 6px solid var(--accent);">
-              <h2 class="section-title" style="font-size: 1.8rem;">How to Use This Clustering Tool</h2>
-              <p>This tool uses <strong>N-Gram analysis</strong> to find semantic relationships between your keywords. Unlike basic sorters, it looks for shared "roots" and intent modifiers.</p>
-              <h3 style="margin-top: 20px;">Why Cluster Keywords?</h3>
-              <ul style="margin-top: 15px; padding-left: 20px; list-style: disc;">
-                  <li><strong>Prevent Cannibalization:</strong> Ensure you don't write two articles for the same topic.</li>
-                  <li><strong>Topical Authority:</strong> Find "hub" topics (Primary Keywords) and "spoke" topics (Long-tails).</li>
-                  <li><strong>Efficiency:</strong> Turn a list of 5,000 messy keywords into 50 clear content ideas.</li>
-              </ul>
-          </article>
-        </section>
+        <article class="card seo-guide" style="margin-top: 80px; border-left: 6px solid var(--primary);">
+            <h2>How to Use This Clustering Tool</h2>
+            <p>This tool uses <strong>N-Gram analysis</strong> to find semantic relationships between your keywords. Unlike basic sorters, it looks for shared "roots" and intent modifiers.</p>
+            <h3>Why Cluster Keywords?</h3>
+            <ul>
+                <li><strong>Prevent Cannibalization:</strong> Ensure you don't write two articles for the same topic.</li>
+                <li><strong>Topical Authority:</strong> Find "hub" topics (Primary Keywords) and "spoke" topics (Long-tails).</li>
+                <li><strong>Efficiency:</strong> Turn a list of 5,000 messy keywords into 50 clear content ideas.</li>
+            </ul>
+        </article>
 
-        <section id="faq" class="section-soft" style="margin-top: 80px; margin-bottom: 80px;">
-            <div class="section-header">
-                <span class="section-eyebrow">FAQ</span>
+        <section class="faq-section" style="margin-top: 80px; padding-top: 60px; border-top: 1px solid var(--border);">
+            <div class="section-header" style="text-align: left; margin-left: 0;">
                 <h2 class="section-title">Frequently Asked Questions</h2>
             </div>
             
             <div class="grid-2">
-                <article class="card faq-card">
-                    <h3>What is the best semantic keyword clustering tool?</h3>
-                    <p>While many paid tools exist, this <strong>free semantic keyword clustering tool</strong> runs entirely in your browser. It offers professional-grade intent detection without monthly fees.</p>
-                </article>
+                <div class="card">
+                    <h3 style="font-size: 18px; margin-bottom: 12px;">What is the best semantic keyword clustering tool?</h3>
+                    <p style="font-size: 15px;">While many paid tools exist, this <strong>free semantic keyword clustering tool</strong> runs entirely in your browser. It offers professional-grade intent detection without monthly fees.</p>
+                </div>
 
-                <article class="card faq-card">
-                    <h3>Do I need Python for semantic keyword clustering?</h3>
-                    <p>No. Many SEOs search for <em>"semantic keyword clustering python"</em> thinking they need to write code. This tool allows you to <strong>automate semantic keyword clustering</strong> instantly with zero coding knowledge.</p>
-                </article>
+                <div class="card">
+                    <h3 style="font-size: 18px; margin-bottom: 12px;">Do I need Python for semantic keyword clustering?</h3>
+                    <p style="font-size: 15px;">No. Many SEOs search for <em>"semantic keyword clustering python"</em> thinking they need to write code. This tool allows you to <strong>automate semantic keyword clustering</strong> instantly with zero coding knowledge.</p>
+                </div>
 
-                <article class="card faq-card">
-                    <h3>How does this tool help with topic clustering?</h3>
-                    <p>This is one of the most effective <strong>tools for semantic keyword research and topic clustering</strong>. It uses N-Gram analysis to find shared root words, automatically grouping them into "Parent Topics" (Hubs) and "Child Keywords" (Spokes).</p>
-                </article>
+                <div class="card">
+                    <h3 style="font-size: 18px; margin-bottom: 12px;">How does this tool help with topic clustering?</h3>
+                    <p style="font-size: 15px;">This is one of the most effective <strong>tools for semantic keyword research and topic clustering</strong>. It uses N-Gram analysis to find shared root words, automatically grouping them into "Parent Topics" (Hubs) and "Child Keywords" (Spokes).</p>
+                </div>
             </div>
         </section>
-      </div>
     </main>
 
 <footer>
