@@ -42,128 +42,55 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
 
   <link rel="stylesheet" href="/css/styles.css" />
-  <style>
-    .breadcrumb{background:var(--bg-soft);padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;}
-    .breadcrumb-list{display:flex;align-items:center;gap:10px;flex-wrap:wrap;list-style:none;padding:0;margin:0;}
-    .breadcrumb-list a{color:var(--muted);}
-    .breadcrumb-list a:hover{color:var(--accent);}
-    .breadcrumb-separator{color:var(--muted);padding:0 8px;}
-    .breadcrumb-current{color:var(--primary);font-weight:600;}
-
-    .article-header{padding:40px 0 32px;max-width:820px;margin:0 auto;text-align:center;}
-    .article-category{display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;text-transform:uppercase;margin-bottom:16px;}
-    .article-title{font-size:36px;font-weight:800;color:var(--primary);margin-bottom:16px;line-height:1.3;}
-    .article-meta{display:flex;align-items:center;justify-content:center;gap:20px;font-size:14px;color:var(--muted);flex-wrap:wrap;}
-    .article-meta span{display:flex;align-items:center;gap:6px;}
-
-    .featured-image{max-width:100%;margin:0 auto 40px;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 24px rgba(15,23,42,0.12);}
-    .featured-image img{width:100%;height:auto;}
-
-    .article-layout{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start;margin-bottom:60px;}
-    .article-sidebar{position:sticky;top:100px;}
-    .article-content{max-width:720px;}
-
-    .toc{background:#fff;border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm);margin-bottom:40px;}
-    .toc-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:10px;}
-    .toc-list{list-style:none;padding:0;}
-    .toc-list li{margin-bottom:10px;}
-    .toc-list a{color:var(--text);font-size:15px;font-weight:500;display:block;padding:4px 0;transition:all 0.3s;line-height:1.4;}
-    .toc-list a:hover{color:var(--accent);padding-left:6px;}
-    .toc-list li ol{margin-top:8px;margin-left:16px;list-style:none;}
-    .toc-list li ol li{margin-bottom:6px;}
-    .toc-list li ol a{font-size:13px;color:var(--muted);}
-
-    .article-content h2{font-size:28px;font-weight:700;color:var(--primary);margin:48px 0 16px;line-height:1.4;scroll-margin-top:100px;}
-    .article-content h3{font-size:22px;font-weight:700;color:var(--primary);margin:36px 0 14px;line-height:1.4;scroll-margin-top:100px;}
-    .article-content p{margin-bottom:20px;color:var(--text);}
-    .article-content ul,.article-content ol{margin-bottom:20px;padding-left:24px;}
-    .article-content li{margin-bottom:10px;color:var(--text);}
-    .article-content strong{color:var(--primary);font-weight:600;}
-    .article-content blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:24px 0;font-style:italic;color:var(--muted);background:var(--bg-soft);border-radius:8px;}
-    .article-content table{width:100%;border-collapse:collapse;margin:24px 0;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(15,23,42,0.1);}
-    .article-content th,.article-content td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);}
-    .article-content th{background:var(--primary);color:#fff;font-weight:600;font-size:14px;}
-    .article-content td{background:var(--bg-soft);font-size:14px;}
-
-    .strategy-card{background:var(--bg-soft);border-radius:var(--radius);padding:24px;margin:24px 0;border-left:4px solid var(--secondary);scroll-margin-top:100px;}
-    .strategy-card h4{font-size:18px;font-weight:700;color:var(--primary);margin-bottom:12px;}
-    .strategy-card ul{padding-left:20px;margin-bottom:12px;}
-    .strategy-card li{margin-bottom:8px;}
-
-    .content-image{margin:32px 0;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,0.1);}
-
-    .cta-box{background:linear-gradient(135deg,#BA1971,#2C7A7B);color:#fff;border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0;}
-    .cta-box h3{font-size:24px;font-weight:700;margin-bottom:10px;color:#fff;}
-    .cta-box p{font-size:15px;color:#E5E7EB;margin-bottom:20px;}
-
-    @media (max-width:900px){
-      .article-layout{grid-template-columns:1fr;}
-      .article-sidebar{position:static;margin-bottom:32px;}
-      .article-title{font-size:28px;}
-    }
-  </style>
 </head>
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header role="banner">
-    <div class="container header-inner">
-      <a href="/" class="logo">Kamal Khanal</a>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/case-studies/">Case Studies</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
-    </div>
-  </header>
-
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header>
+  <div class="container header-inner">
+    <a href="/" class="logo">Kamal Khanal</a>
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/case-studies/">Case Studies</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
+  </div>
+</header>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="breadcrumb-separator">›</span>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/blog/" itemprop="item"><span itemprop="name">Blog</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-        <span class="breadcrumb-separator">›</span>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <span class="breadcrumb-current" itemprop="name">Content Marketing in Nepal</span>
-          <meta itemprop="position" content="3" />
-        </li>
-      </ol>
+      <ul class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li class="breadcrumb-current">Content Marketing in Nepal</li>
+      </ul>
     </div>
   </nav>
 
-  <section class="article-header">
-    <span class="article-category">Content Marketing</span>
-    <h1 class="article-title">Content Marketing in Nepal 2026: Complete Strategy Guide with AI, Voice Search & Social Commerce</h1>
-    <div class="article-meta">
-      <span>👤 By <strong>Kamal Khanal</strong></span>
-      <span>📅 December 21, 2025</span>
-      <span>⏱ 16 min read</span>
-      <span>🏷 Content Marketing</span>
-    </div>
-  </section>
+  <main id="main" class="container post-content">
+    <section class="article-header">
+      <span class="pill">Content Marketing</span>
+      <h1 class="article-title">Content Marketing in Nepal 2026: Complete Strategy Guide with AI, Voice Search & Social Commerce</h1>
+      <div class="article-meta">
+        <span>👤 By <strong>Kamal Khanal</strong></span>
+        <span>📅 December 21, 2025</span>
+        <span>⏱ 16 min read</span>
+      </div>
+    </section>
 
-  <div class="container">
     <div class="featured-image">
       <img
         src="/assets/content-marketing-in-nepal.jpg"
@@ -173,191 +100,173 @@
         alt="Content marketing strategy planning session in Nepal showing digital marketers creating social media campaigns, SEO content calendars, and local influencer partnership strategies for businesses in Kathmandu and Pokhara"
       />
     </div>
-  </div>
 
-  <div class="container">
-    <div class="article-layout">
-      
-      <aside class="article-sidebar" aria-label="Table of contents">
-        <nav class="toc">
-          <h2 class="toc-title">📑 Table of Contents</h2>
-          <ol class="toc-list">
-            <li><a href="#introduction">Nepal's Digital Landscape 2026</a></li>
-            <li><a href="#definition">What Content Marketing Means</a></li>
-            <li><a href="#importance">Why It Matters for Nepal</a></li>
-            <li><a href="#strategies">Proven Content Strategies</a>
-              <ol>
-                <li><a href="#audience">Know Your Audience</a></li>
-                <li><a href="#language">Bilingual Strategy</a></li>
-                <li><a href="#video">Video Content</a></li>
-                <li><a href="#influencers">Micro-Influencers</a></li>
-                <li><a href="#seo">Local SEO</a></li>
-              </ol>
-            </li>
-            <li><a href="#trends">Revolutionary 2026 Trends</a></li>
-            <li><a href="#examples">Success Stories</a></li>
-            <li><a href="#tools">Essential Tools</a></li>
-            <li><a href="#challenges">Challenges & Solutions</a></li>
-            <li><a href="#future">Future Predictions</a></li>
-          </ol>
-        </nav>
-      </aside>
+    <nav class="toc">
+      <p class="toc-title">Table of Contents</p>
+      <ul class="toc-list">
+        <li><a href="#introduction">Nepal's Digital Landscape 2026</a></li>
+        <li><a href="#definition">What Content Marketing Means</a></li>
+        <li><a href="#importance">Why It Matters for Nepal</a></li>
+        <li><a href="#strategies">Proven Content Strategies</a></li>
+        <li><a href="#trends">Revolutionary 2026 Trends</a></li>
+        <li><a href="#examples">Success Stories</a></li>
+        <li><a href="#tools">Essential Tools</a></li>
+        <li><a href="#challenges">Challenges & Solutions</a></li>
+        <li><a href="#future">Future Predictions</a></li>
+      </ul>
+    </nav>
 
-      <article class="article-content" role="main">
+    <div class="article-body">
+      <section id="introduction">
+        <p>
+          Content marketing in Nepal is rapidly evolving as businesses recognize the value of creating useful content to reach local audiences online. By 2026, Nepal's digital population has grown dramatically. According to <strong>DataReportal</strong>, 16.6 million Nepalis use the internet (about 56% of the population), with around <strong>14.8 million social media accounts</strong> active (50% of the population).
+        </p>
+        <p>
+          This expanding online community means Nepali brands must invest in engaging content – from Nepali-language blog articles and social posts to videos and apps – to capture audience attention. Smartphones dominate Nepal's web usage: there were <strong>32.4 million mobile connections</strong> in late 2025 (109% of the total population). Most Nepalis access content on mobile, so a mobile-first content strategy is essential.
+        </p>
+        <p>
+          Companies from Kathmandu startups to Chitwan lodges are leveraging digital channels to tell their stories. In this guide, we explore the latest trends, strategies, and local insights shaping content marketing in Nepal in 2026.
+        </p>
+        <blockquote>
+          <strong>What is Content Marketing?</strong> Content marketing is the strategic creation and distribution of valuable, relevant, and consistent content to attract and retain a clearly defined audience — ultimately driving profitable customer action. In Nepal's context, this means creating content that resonates with local culture, solves real problems, speaks in the language your audience understands (Nepali, English, or both), and acknowledges regional festivals, traditions, and pain points.
+        </blockquote>
+      </section>
+
+      <section id="definition">
+        <h2>What Content Marketing Actually Means in Nepal's Context</h2>
+        <p>
+          Content marketing isn't about bombarding people with sales messages. It's about creating something genuinely valuable that attracts and engages your specific audience. Think about how <a href="https://www.daraz.com.np/" target="_blank" rel="noopener">Daraz Nepal</a> operates. They don't just list products—they create unboxing videos, comparison guides, shopping tips during Dashain and Tihar, and seasonal content that actually helps people make better purchasing decisions. That's content marketing working at scale.
+        </p>
+        <p>
+          For service businesses in Kathmandu, Lalitpur, Pokhara, or Butwal, effective content marketing might include:
+        </p>
+        <ul>
+          <li><strong>Educational blog posts</strong> answering real customer questions in both Nepali and English</li>
+          <li><strong>Behind-the-scenes videos</strong> showing your process, team, and authentic business story</li>
+          <li><strong>Customer success stories</strong> that build trust and showcase real results</li>
+          <li><strong>Interactive social media content</strong> that starts conversations rather than broadcasting promotions</li>
+          <li><strong>WhatsApp Business catalogs</strong> with detailed product information and customer support</li>
+        </ul>
+        <p>The goal? <strong>Provide value first, sales second.</strong> This approach builds long-term customer relationships that translate into sustainable business growth.</p>
+      </section>
+
+      <section id="importance">
+        <h2>Why Content Marketing Matters More Than Ever for Nepalese Businesses</h2>
+        <p>
+          The shift I'm seeing in Nepal's market is profound. Traditional advertising—newspaper ads, radio spots, billboards—still has its place, but content marketing delivers something different and more sustainable for modern businesses.
+        </p>
         
-        <section id="introduction">
-          <p>
-            Content marketing in Nepal is rapidly evolving as businesses recognize the value of creating useful content to reach local audiences online. By 2026, Nepal's digital population has grown dramatically. According to <strong>DataReportal</strong>, 16.6 million Nepalis use the internet (about 56% of the population), with around <strong>14.8 million social media accounts</strong> active (50% of the population).
-          </p>
-          <p>
-            This expanding online community means Nepali brands must invest in engaging content – from Nepali-language blog articles and social posts to videos and apps – to capture audience attention. Smartphones dominate Nepal's web usage: there were <strong>32.4 million mobile connections</strong> in late 2025 (109% of the total population). Most Nepalis access content on mobile, so a mobile-first content strategy is essential.
-          </p>
-          <p>
-            Companies from Kathmandu startups to Chitwan lodges are leveraging digital channels to tell their stories. In this guide, we explore the latest trends, strategies, and local insights shaping content marketing in Nepal in 2026.
-          </p>
-          <blockquote>
-            <strong>What is Content Marketing?</strong> Content marketing is the strategic creation and distribution of valuable, relevant, and consistent content to attract and retain a clearly defined audience — ultimately driving profitable customer action. In Nepal's context, this means creating content that resonates with local culture, solves real problems, speaks in the language your audience understands (Nepali, English, or both), and acknowledges regional festivals, traditions, and pain points.
-          </blockquote>
-        </section>
+        <h3>It's Genuinely Affordable</h3>
+        <p>
+          For small businesses operating on tight budgets, content marketing offers the best ROI I've seen. A well-crafted blog post optimized for "best restaurants in Thamel" can drive traffic for months. A YouTube video showing "how to choose the perfect trekking route" can become your best salesperson, working 24/7 without asking for overtime or commissions.
+        </p>
 
-        <section id="definition">
-          <h2>What Content Marketing Actually Means in Nepal's Context</h2>
-          <p>
-            Content marketing isn't about bombarding people with sales messages. It's about creating something genuinely valuable that attracts and engages your specific audience. Think about how <a href="https://www.daraz.com.np/" target="_blank" rel="noopener">Daraz Nepal</a> operates. They don't just list products—they create unboxing videos, comparison guides, shopping tips during Dashain and Tihar, and seasonal content that actually helps people make better purchasing decisions. That's content marketing working at scale.
-          </p>
-          <p>
-            For service businesses in Kathmandu, Lalitpur, Pokhara, or Butwal, effective content marketing might include:
-          </p>
+        <h3>Mobile-First is Our Reality</h3>
+        <p>
+          Over <strong>90% of internet access in Nepal</strong> happens through mobile devices. Your content needs to load fast on slower 4G connections, read easily on small screens, and deliver value in bite-sized chunks. This isn't just best practice—it's survival in Nepal's digital marketplace.
+        </p>
+
+        <h3>Local Connection Drives Conversions</h3>
+        <p>
+          Content that acknowledges Nepali festivals (Dashain, Tihar, Lhosar), understands local pain points (load shedding, monsoon challenges, rural connectivity), and speaks in our cultural language converts at rates that generic, translated content simply cannot match. When <strong>Foodmario</strong> creates content around Dashain recipes or <a href="https://esewa.com.np/" target="_blank" rel="noopener">eSewa</a> explains digital payments in simple Nepali, they're not just translating—they're connecting authentically.
+        </p>
+
+        <h3>Social Commerce is Exploding</h3>
+        <p>
+          Many small businesses in Nepal now run entirely through Facebook and Instagram, handling everything from product discovery to payment processing in DMs and WhatsApp. This is real, it's growing fast, and it's changing the game for entrepreneurs who couldn't afford traditional e-commerce setups. Platforms like <a href="https://khaltibyime.khalti.com/" target="_blank" rel="noopener">khaltibyIME</a> and Khalti have made digital payments accessible to even small vendors.
+        </p>
+      </section>
+
+      <div class="content-image">
+        <img src="/assets/social-commerce-nepal.webp" alt="Social commerce in Nepal showing Facebook Marketplace seller managing orders, Instagram Shopping product tags, and WhatsApp Business catalog used by Kathmandu and Pokhara entrepreneurs" width="1536" height="857" loading="lazy" />
+      </div>
+
+      <section id="strategies">
+        <h2>Advanced Content Marketing Strategies That Actually Work in Nepal</h2>
+        <p>
+          Let me share what's working based on real results I'm seeing across different industries in Kathmandu, Pokhara, Chitwan, and beyond:
+        </p>
+
+        <div class="strategy-card" id="audience">
+          <h3>1. Know Your Nepalese Audience Like Your Family Knows You</h3>
+          <p>Generic audience personas don't cut it anymore in 2026. You need to understand:</p>
           <ul>
-            <li><strong>Educational blog posts</strong> answering real customer questions in both Nepali and English</li>
-            <li><strong>Behind-the-scenes videos</strong> showing your process, team, and authentic business story</li>
-            <li><strong>Customer success stories</strong> that build trust and showcase real results</li>
-            <li><strong>Interactive social media content</strong> that starts conversations rather than broadcasting promotions</li>
-            <li><strong>WhatsApp Business catalogs</strong> with detailed product information and customer support</li>
+            <li><strong>Platform preferences:</strong> Which platform does your audience prefer for which type of content?</li>
+            <li><strong>Activity timing:</strong> What time of day are they most active?</li>
+            <li><strong>Real pain points:</strong> What are their actual challenges?</li>
+            <li><strong>Language comfort:</strong> Do they prefer Nepali, English, or code-switching?</li>
+            <li><strong>Purchase behavior:</strong> Do they research online and buy offline, or vice versa?</li>
           </ul>
-          <p>The goal? <strong>Provide value first, sales second.</strong> This approach builds long-term customer relationships that translate into sustainable business growth.</p>
-        </section>
-
-        <section id="importance">
-          <h2>Why Content Marketing Matters More Than Ever for Nepalese Businesses</h2>
-          <p>
-            The shift I'm seeing in Nepal's market is profound. Traditional advertising—newspaper ads, radio spots, billboards—still has its place, but content marketing delivers something different and more sustainable for modern businesses.
-          </p>
-          
-          <h3>It's Genuinely Affordable</h3>
-          <p>
-            For small businesses operating on tight budgets, content marketing offers the best ROI I've seen. A well-crafted blog post optimized for "best restaurants in Thamel" can drive traffic for months. A YouTube video showing "how to choose the perfect trekking route" can become your best salesperson, working 24/7 without asking for overtime or commissions.
-          </p>
-
-          <h3>Mobile-First is Our Reality</h3>
-          <p>
-            Over <strong>90% of internet access in Nepal</strong> happens through mobile devices. Your content needs to load fast on slower 4G connections, read easily on small screens, and deliver value in bite-sized chunks. This isn't just best practice—it's survival in Nepal's digital marketplace.
-          </p>
-
-          <h3>Local Connection Drives Conversions</h3>
-          <p>
-            Content that acknowledges Nepali festivals (Dashain, Tihar, Lhosar), understands local pain points (load shedding, monsoon challenges, rural connectivity), and speaks in our cultural language converts at rates that generic, translated content simply cannot match. When <strong>Foodmario</strong> creates content around Dashain recipes or <a href="https://esewa.com.np/" target="_blank" rel="noopener">eSewa</a> explains digital payments in simple Nepali, they're not just translating—they're connecting authentically.
-          </p>
-
-          <h3>Social Commerce is Exploding</h3>
-          <p>
-            Many small businesses in Nepal now run entirely through Facebook and Instagram, handling everything from product discovery to payment processing in DMs and WhatsApp. This is real, it's growing fast, and it's changing the game for entrepreneurs who couldn't afford traditional e-commerce setups. Platforms like <a href="https://khaltibyime.khalti.com/" target="_blank" rel="noopener">khaltibyIME</a> and Khalti have made digital payments accessible to even small vendors.
-          </p>
-        </section>
-
-        <div class="content-image">
-          <img src="/assets/social-commerce-nepal.webp" alt="Social commerce in Nepal showing Facebook Marketplace seller managing orders, Instagram Shopping product tags, and WhatsApp Business catalog used by Kathmandu and Pokhara entrepreneurs" width="1536" height="857" loading="lazy" />
         </div>
 
-        <section id="strategies">
-          <h2>Advanced Content Marketing Strategies That Actually Work in Nepal</h2>
+        <div class="strategy-card" id="language">
+          <h3>2. The Bilingual Advantage: Strategic Language Mixing</h3>
           <p>
-            Let me share what's working based on real results I'm seeing across different industries in Kathmandu, Pokhara, Chitwan, and beyond:
+            It's about knowing <strong>when to use which language</strong> for maximum impact:
           </p>
-
-          <div class="strategy-card" id="audience">
-            <h4>1. Know Your Nepalese Audience Like Your Family Knows You</h4>
-            <p>Generic audience personas don't cut it anymore in 2026. You need to understand:</p>
-            <ul>
-              <li><strong>Platform preferences:</strong> Which platform does your audience prefer for which type of content?</li>
-              <li><strong>Activity timing:</strong> What time of day are they most active?</li>
-              <li><strong>Real pain points:</strong> What are their actual challenges?</li>
-              <li><strong>Language comfort:</strong> Do they prefer Nepali, English, or code-switching?</li>
-              <li><strong>Purchase behavior:</strong> Do they research online and buy offline, or vice versa?</li>
-            </ul>
-          </div>
-
-          <div class="strategy-card" id="language">
-            <h4>2. The Bilingual Advantage: Strategic Language Mixing</h4>
-            <p>
-              It's about knowing <strong>when to use which language</strong> for maximum impact:
-            </p>
-            <table>
-              <thead>
-                <tr>
-                  <th>Use Nepali for</th>
-                  <th>Use English for</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Emotional connection and storytelling</td>
-                  <td>Technical terms and professional services</td>
-                </tr>
-                <tr>
-                  <td>Explaining complex local concepts</td>
-                  <td>International audience segments</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div class="strategy-card" id="video">
-            <h4>3. Video Content Strategy: Beyond Just Posting Videos</h4>
-            <p>
-              Short-form video is essential. Hook viewers in first 2 seconds.
-            </p>
-          </div>
-
-          <div class="strategy-card" id="influencers">
-            <h4>4. Influencer Collaboration: The Micro-Influencer Advantage</h4>
-            <p>
-              Work with micro-influencers (5,000-50,000 followers) for higher engagement and trust.
-            </p>
-          </div>
-
-          <div class="strategy-card" id="seo">
-            <h4>5. SEO That Actually Drives Traffic in Nepal</h4>
-            <p>
-              Local SEO is non-negotiable. Optimize for "near me" searches and Google Business Profile.
-            </p>
-          </div>
-        </section>
-
-        <section id="trends">
-          <h2>Revolutionary Trends Reshaping Content Marketing in Nepal (2026)</h2>
-          <ul>
-            <li><strong>AI-Powered Personalization:</strong> Hyper-relevant content recommendations.</li>
-            <li><strong>Voice Search:</strong> Conversational queries in Nepali and English.</li>
-            <li><strong>Social Commerce:</strong> Selling directly on FB, Insta, and TikTok.</li>
-            <li><strong>Zero-Click Content:</strong> Providing value directly in the feed.</li>
-          </ul>
-        </section>
-
-        <div class="cta-box" id="contact">
-          <h3>Ready to Transform Your Digital Presence in Nepal?</h3>
-          <p>
-            Get a free content strategy consultation tailored to your business goals.
-          </p>
-          <a href="/services/#contact" class="btn-primary">Get Free Consultation</a>
+          <table>
+            <thead>
+              <tr>
+                <th>Use Nepali for</th>
+                <th>Use English for</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Emotional connection and storytelling</td>
+                <td>Technical terms and professional services</td>
+              </tr>
+              <tr>
+                <td>Explaining complex local concepts</td>
+                <td>International audience segments</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
 
-      </article>
+        <div class="strategy-card" id="video">
+          <h3>3. Video Content Strategy: Beyond Just Posting Videos</h3>
+          <p>
+            Short-form video is essential. Hook viewers in first 2 seconds.
+          </p>
+        </div>
+
+        <div class="strategy-card" id="influencers">
+          <h3>4. Influencer Collaboration: The Micro-Influencer Advantage</h3>
+          <p>
+            Work with micro-influencers (5,000-50,000 followers) for higher engagement and trust.
+          </p>
+        </div>
+
+        <div class="strategy-card" id="seo">
+          <h3>5. SEO That Actually Drives Traffic in Nepal</h3>
+          <p>
+            Local SEO is non-negotiable. Optimize for "near me" searches and Google Business Profile.
+          </p>
+        </div>
+      </section>
+
+      <section id="trends">
+        <h2>Revolutionary Trends Reshaping Content Marketing in Nepal (2026)</h2>
+        <ul>
+          <li><strong>AI-Powered Personalization:</strong> Hyper-relevant content recommendations.</li>
+          <li><strong>Voice Search:</strong> Conversational queries in Nepali and English.</li>
+          <li><strong>Social Commerce:</strong> Selling directly on FB, Insta, and TikTok.</li>
+          <li><strong>Zero-Click Content:</strong> Providing value directly in the feed.</li>
+        </ul>
+      </section>
+
+      <div class="cta-box" id="contact">
+        <h3>Ready to Transform Your Digital Presence in Nepal?</h3>
+        <p>
+          Get a free content strategy consultation tailored to your business goals.
+        </p>
+        <a href="/contact/" class="btn-primary">Get Free Consultation</a>
+      </div>
     </div>
-  </div>
+  </main>
 
-
-<footer role="contentinfo">
+<footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -406,26 +315,22 @@
   <div class="whatsapp-container">
     <span class="whatsapp-label">Chat on WhatsApp</span>
     <a href="https://wa.me/9779708141147" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32">
-        <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" style="fill:#fff;">
+        <path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
       </svg>
     </a>
   </div>
+
   <script>
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
-
     if (hamburger && navMenu) {
-      hamburger.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-      });
-
+      hamburger.addEventListener('click', () => { navMenu.classList.toggle('active'); });
       document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener('click', () => {
-          navMenu.classList.remove('active');
-        });
+        link.addEventListener('click', () => { navMenu.classList.remove('active'); });
       });
     }
   </script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

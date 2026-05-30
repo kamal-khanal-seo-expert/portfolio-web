@@ -17,177 +17,69 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
 
   <link rel="stylesheet" href="/css/styles.css" />
-  <style>
-    /* Contact Page Specific Styles */
-    .contact-wrapper {
-      padding: 60px 0;
-    }
-    .contact-header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 40px;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    @media(min-width: 768px) {
-      .contact-grid {
-        grid-template-columns: 1.5fr 1fr;
-      }
-    }
-    .contact-form-container {
-      background: #fff;
-      padding: 30px;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
-      max-width: 600px;
-      margin: 0 auto;
-      width: 100%;
-    }
-    .contact-form .form-group {
-      margin-bottom: 20px;
-      position: relative;
-    }
-    .contact-form label {
-      display: block;
-      margin-bottom: 8px;
-      font-weight: 500;
-      color: var(--primary);
-    }
-    .contact-form label span {
-      color: var(--error);
-    }
-    .contact-form input,
-    .contact-form select,
-    .contact-form textarea {
-      width: 100%;
-      padding: 12px;
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      font-family: inherit;
-      font-size: 16px;
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-    .contact-form input:focus,
-    .contact-form select:focus,
-    .contact-form textarea:focus {
-      outline: none;
-      border-color: var(--primary);
-      box-shadow: 0 0 0 3px rgba(10, 38, 71, 0.1);
-    }
-    .contact-form textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-    .contact-form .btn-submit {
-      width: 100%;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 6px;
-      margin-top: 10px;
-    }
-    .error-message {
-      color: var(--error);
-      font-size: 13px;
-      margin-top: 5px;
-      display: none;
-    }
-    .form-group.has-error input,
-    .form-group.has-error select,
-    .form-group.has-error textarea {
-      border-color: var(--error);
-    }
-    .form-group.has-error .error-message {
-      display: block;
-    }
-
-    .contact-sidebar {
-      background: var(--bg-soft);
-      padding: 30px;
-      border-radius: var(--radius-md);
-    }
-    .contact-sidebar h3 {
-      margin-bottom: 20px;
-    }
-    .social-proof {
-      background: #fff;
-      padding: 15px;
-      border-radius: var(--radius-sm);
-      border-left: 4px solid var(--success);
-      margin-bottom: 20px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    }
-    .social-proof strong {
-      display: block;
-      color: var(--primary);
-    }
-    .contact-method {
-      margin-bottom: 15px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-  </style>
 </head>
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header role="banner">
-    <div class="container header-inner">
-      <a href="/" class="logo">Kamal Khanal</a>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/case-studies/">Case Studies</a></li>
-          <li><a href="/contact/">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
-    </div>
-  </header>
+<header>
+  <div class="container header-inner">
+    <a href="/" class="logo">Kamal Khanal</a>
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/case-studies/">Case Studies</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
+  </div>
+</header>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <main id="main">
-    <section class="contact-wrapper">
+    <section class="hero">
       <div class="container">
-        <div class="contact-header">
+        <div class="section-header">
+          <span class="section-eyebrow">Contact</span>
           <h1 class="section-title">Let's Build Your SEO Strategy</h1>
           <p class="section-sub">Share your details below to schedule a free initial consultation and audit.</p>
         </div>
-        
-        <div class="contact-grid">
-          <div class="contact-form-container">
-            <form id="contactForm" class="contact-form" novalidate>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container grid-2">
+        <div class="contact-form-wrapper">
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="form-grid">
               <div class="form-group">
                 <label for="name">Full Name <span>*</span></label>
-                <input type="text" id="name" name="name" required />
+                <input type="text" id="name" name="name" required placeholder="John Doe" />
                 <div class="error-message">Please enter your full name.</div>
               </div>
               <div class="form-group">
                 <label for="email">Email Address <span>*</span></label>
-                <input type="email" id="email" name="email" required />
+                <input type="email" id="email" name="email" required placeholder="john@example.com" />
                 <div class="error-message">Please enter a valid email address.</div>
               </div>
               <div class="form-group">
                 <label for="phone">Phone / WhatsApp</label>
-                <input type="tel" id="phone" name="phone" />
+                <input type="tel" id="phone" name="phone" placeholder="+977" />
               </div>
               <div class="form-group">
                 <label for="website">Website URL</label>
-                <input type="url" id="website" name="website" placeholder="https://" />
+                <input type="url" id="website" name="website" placeholder="https://yourwebsite.com" />
               </div>
-              <div class="form-group">
+              <div class="form-group full-width">
                 <label for="service">Service of Interest <span>*</span></label>
                 <select id="service" name="service" required>
                   <option value="">Select a service...</option>
@@ -199,39 +91,40 @@
                 </select>
                 <div class="error-message">Please select a service.</div>
               </div>
-              <div class="form-group">
+              <div class="form-group full-width">
                 <label for="message">Message <span>*</span></label>
                 <textarea id="message" name="message" required placeholder="Tell me about your website and goals..."></textarea>
                 <div class="error-message">Please provide a message.</div>
               </div>
-              <button type="submit" class="btn-primary btn-submit">Send Message</button>
-            </form>
-          </div>
-
-          <aside class="contact-sidebar">
-            <div class="social-proof">
-              <strong>⚡ Fast Response Time</strong>
-              <span>Usually replies within 24 hours. Includes a free initial consultation and mini-audit.</span>
             </div>
-            
+            <button type="submit" class="btn-primary btn-submit" style="width: 100%; margin-top: 24px;">Send Message</button>
+          </form>
+        </div>
+
+        <aside class="contact-sidebar">
+          <div class="card result-card" style="border-left: 4px solid var(--success); margin-bottom: 24px;">
+            <strong style="display: block; color: var(--primary); margin-bottom: 8px;">⚡ Fast Response Time</strong>
+            <p style="font-size: 14px; margin-bottom: 0;">Usually replies within 24 hours. Includes a free initial consultation and mini-audit.</p>
+          </div>
+          
+          <div class="card">
             <h3>Direct Contact</h3>
-            <div class="contact-method">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            <div class="contact-method" style="margin-bottom: 16px; display: flex; align-items: center; gap: 12px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
               <a href="mailto:seo-expert@kamalkhanal.info.np">seo-expert@kamalkhanal.info.np</a>
             </div>
-            <div class="contact-method">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div class="contact-method" style="display: flex; align-items: center; gap: 12px;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
               <a href="https://wa.me/9779708141147">+977 970-8141147</a>
             </div>
-            <p style="margin-top: 20px; font-size: 14px; color: var(--muted);">Based in Lalitpur, Nepal. Working with clients globally.</p>
-          </aside>
-        </div>
+            <p style="margin-top: 32px; font-size: 14px; color: var(--muted);">Based in Lalitpur, Nepal. Working with clients globally.</p>
+          </div>
+        </aside>
       </div>
     </section>
   </main>
 
-  
-<footer role="contentinfo">
+<footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -274,14 +167,13 @@
     </div>
     <div class="footer-bottom">© 2026 Kamal Khanal – SEO Specialist in Nepal. All rights reserved.</div>
   </div>
-</footer>>
+</footer>
 
-  
   <div class="whatsapp-container">
     <span class="whatsapp-label">Chat on WhatsApp</span>
     <a href="https://wa.me/9779708141147" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32">
-        <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" style="fill:#fff;">
+        <path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
       </svg>
     </a>
   </div>
@@ -321,7 +213,7 @@
         btn.style.opacity = '0.7';
         
         setTimeout(() => {
-          form.innerHTML = '<div style="text-align:center; padding: 40px 0;"><h3 style="color:var(--success); margin-bottom:10px;">Message Sent Successfully!</h3><p>Thank you for reaching out. I will get back to you within 24 hours.</p></div>';
+          form.innerHTML = '<div class="card" style="text-align:center; padding: 48px;"><h3 style="color:var(--success); margin-bottom:16px;">Message Sent Successfully!</h3><p>Thank you for reaching out. I will get back to you within 24 hours.</p></div>';
         }, 1000);
       }
     });

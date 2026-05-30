@@ -40,129 +40,54 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" />
   <link rel="stylesheet" href="/css/styles.css" />
-  <style>
-    .breadcrumb{background:var(--bg-soft);padding:16px 0;border-bottom:1px solid var(--border);font-size:15px;}
-    .breadcrumb-list{display:flex;align-items:center;gap:10px;flex-wrap:wrap;list-style:none;padding:0;margin:0;}
-    .breadcrumb-list a{color:var(--muted);}
-    .breadcrumb-list a:hover{color:var(--accent);}
-    .breadcrumb-separator{color:var(--muted);padding:0 8px;}
-    .breadcrumb-current{color:var(--primary);font-weight:600;}
-
-    .article-header{padding:40px 0 32px;max-width:820px;margin:0 auto;text-align:center;}
-    .article-category{display:inline-flex;align-items:center;padding:6px 14px;border-radius:999px;background:var(--accent);color:#fff;font-size:12px;font-weight:600;text-transform:uppercase;margin-bottom:16px;}
-    .article-title{font-size:36px;font-weight:800;color:var(--primary);margin-bottom:16px;line-height:1.3;}
-    .article-meta{display:flex;align-items:center;justify-content:center;gap:20px;font-size:14px;color:var(--muted);flex-wrap:wrap;}
-    .article-meta span{display:flex;align-items:center;gap:6px;}
-
-    .featured-image{max-width:100%;margin:0 auto 40px;border-radius:var(--radius);overflow:hidden;box-shadow:0 8px 24px rgba(15,23,42,0.12);}
-    .featured-image img{width:100%;height:auto;}
-
-    .article-layout{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:start;margin-bottom:60px;}
-    .article-sidebar{position:sticky;top:100px;}
-    .article-content{max-width:720px;}
-
-    .toc{background:#fff;border:1px solid var(--border);border-left:5px solid var(--accent);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow-sm);margin-bottom:40px;}
-    .toc-title{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:20px;border-bottom:1px solid var(--border);padding-bottom:10px;}
-    .toc-list{list-style:none;padding:0;}
-    .toc-list li{margin-bottom:10px;}
-    .toc-list a{color:var(--text);font-size:15px;font-weight:500;display:block;padding:4px 0;transition:all 0.3s;line-height:1.4;}
-    .toc-list a:hover{color:var(--accent);padding-left:6px;}
-    .toc-list li ol{margin-top:8px;margin-left:16px;list-style:none;}
-    .toc-list li ol li{margin-bottom:6px;}
-    .toc-list li ol a{font-size:13px;color:var(--muted);}
-
-    .article-content h2{font-size:28px;font-weight:700;color:var(--primary);margin:48px 0 16px;line-height:1.4;scroll-margin-top:100px;}
-    .article-content h3{font-size:22px;font-weight:700;color:var(--primary);margin:36px 0 14px;line-height:1.4;scroll-margin-top:100px;}
-    .article-content p{margin-bottom:20px;color:var(--text);}
-    .article-content ul,.article-content ol{margin-bottom:20px;padding-left:24px;}
-    .article-content li{margin-bottom:10px;color:var(--text);}
-    .article-content strong{color:var(--primary);font-weight:600;}
-    .article-content blockquote{border-left:4px solid var(--accent);padding:16px 20px;margin:24px 0;font-style:italic;color:var(--muted);background:var(--bg-soft);border-radius:8px;}
-
-    .strategy-card{background:var(--bg-soft);border-radius:var(--radius);padding:24px;margin:24px 0;border-left:4px solid var(--secondary);scroll-margin-top:100px;}
-    .strategy-card h3{font-size:20px;font-weight:700;color:var(--primary);margin-bottom:12px;}
-    .strategy-card ul{padding-left:20px;margin-bottom:12px;}
-    .strategy-card li{margin-bottom:8px;}
-
-    .content-image{margin:32px 0;border-radius:var(--radius);overflow:hidden;box-shadow:0 6px 20px rgba(15,23,42,0.1);}
-    .image-caption{text-align:center;font-size:13px;color:var(--muted);margin-top:-20px;margin-bottom:24px;}
-
-    .cta-box{background:linear-gradient(135deg,#BA1971,#2C7A7B);color:#fff;border-radius:var(--radius);padding:32px;text-align:center;margin:40px 0;}
-    .cta-box h2{font-size:24px;font-weight:700;margin-bottom:10px;color:#fff;}
-    .cta-box p{font-size:15px;color:#E5E7EB;margin-bottom:20px;}
-
-    table{width:100%;border-collapse:collapse;margin:24px 0;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.05);}
-    th,td{padding:12px 16px;text-align:left;border-bottom:1px solid var(--border);}
-    th{background:var(--primary);color:#fff;font-weight:600;}
-    tr:last-child td{border-bottom:none;}
-
-    @media (max-width:900px){
-      .article-layout{grid-template-columns:1fr;}
-      .article-sidebar{position:static;margin-bottom:32px;}
-      .article-title{font-size:28px;}
-    }
-  </style>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header role="banner">
-    <div class="container header-inner">
-      <a href="/" class="logo">Kamal Khanal</a>
-      <button class="hamburger" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <nav role="navigation" aria-label="Main navigation">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/case-studies/">Case Studies</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
-    </div>
-  </header>
+<header>
+  <div class="container header-inner">
+    <a href="/" class="logo">Kamal Khanal</a>
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about/">About</a></li>
+        <li><a href="/services/">Services</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/case-studies/">Case Studies</a></li>
+        <li><a href="/contact/">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
+  </div>
+</header>
 
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <div class="container">
-      <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-          <meta itemprop="position" content="1" />
-        </li>
-        <span class="breadcrumb-separator">›</span>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <a href="/blog/" itemprop="item"><span itemprop="name">Blog</span></a>
-          <meta itemprop="position" content="2" />
-        </li>
-        <span class="breadcrumb-separator">›</span>
-        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-          <span class="breadcrumb-current" itemprop="name">Best SEO Expert in Nepal</span>
-          <meta itemprop="position" content="3" />
-        </li>
-      </ol>
+      <ul class="breadcrumb-list">
+        <li><a href="/">Home</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li class="breadcrumb-current">Best SEO Expert in Nepal</li>
+      </ul>
     </div>
   </nav>
 
-  <section class="article-header">
-    <span class="article-category">Guides</span>
-    <h1 class="article-title">How to Hire an SEO Expert in Nepal (And What It Actually Costs)</h1>
-    <div class="article-meta">
-      <span>👤 By <strong>Kamal Khanal</strong></span>
-      <span>📅 December 21, 2025</span>
-      <span>⏱ 19 min read</span>
-      <span>🏷 Guides</span>
-    </div>
-  </section>
+  <main id="main" class="container post-content">
+    <section class="article-header">
+      <span class="pill">Guides</span>
+      <h1 class="article-title">How to Hire an SEO Expert in Nepal (And What It Actually Costs)</h1>
+      <div class="article-meta">
+        <span>👤 By <strong>Kamal Khanal</strong></span>
+        <span>📅 December 21, 2025</span>
+        <span>⏱ 19 min read</span>
+      </div>
+    </section>
 
-  <div class="container">
     <div class="featured-image">
       <img
         src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&q=80"
@@ -171,138 +96,123 @@
         loading="eager"
         alt="Professional SEO expert analyzing website performance with Google Search Console"
       />
+      <p class="image-caption">Photo by <a href="https://unsplash.com/@campaign_creators" target="_blank" rel="noopener">Campaign Creators</a> on Unsplash</p>
     </div>
-    <p class="image-caption">Photo by <a href="https://unsplash.com/@campaign_creators" target="_blank" rel="noopener">Campaign Creators</a> on Unsplash</p>
-  </div>
 
-  <div class="container">
-    <div class="article-layout">
-      
-      <aside class="article-sidebar" aria-label="Table of contents">
-        <nav class="toc">
-          <h2 class="toc-title">📑 Table of Contents</h2>
-          <ol class="toc-list">
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#why-need">Why You Need an SEO Expert</a>
-              <ol>
-                <li><a href="#local-benefits">Local Expert Benefits</a></li>
-                <li><a href="#business-growth">Business Growth Impact</a></li>
-              </ol>
-            </li>
-            <li><a href="#qualities">Qualities of Top SEO Experts</a></li>
-            <li><a href="#choosing">How to Choose the Right Expert</a></li>
-            <li><a href="#services">Top SEO Services Offered</a></li>
-            <li><a href="#pricing">Pricing & Cost Guide</a></li>
-            <li><a href="#red-flags">Red Flags to Avoid</a></li>
-            <li><a href="#faq">Frequently Asked Questions</a></li>
-          </ol>
-        </nav>
-      </aside>
+    <nav class="toc">
+      <p class="toc-title">Table of Contents</p>
+      <ul class="toc-list">
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#why-need">Why You Need an SEO Expert</a></li>
+        <li><a href="#qualities">Qualities of Top SEO Experts</a></li>
+        <li><a href="#choosing">How to Choose the Right Expert</a></li>
+        <li><a href="#services">Top SEO Services Offered</a></li>
+        <li><a href="#pricing">Pricing & Cost Guide</a></li>
+        <li><a href="#red-flags">Red Flags to Avoid</a></li>
+        <li><a href="#faq">Frequently Asked Questions</a></li>
+      </ul>
+    </nav>
 
-      <article class="article-content" role="main">
-        
-        <section id="introduction">
-          <p>
-            Finding the <strong>best SEO expert in Nepal</strong> in 2026 requires understanding not just technical skills, but also local market expertise, proven results, and authentic pricing transparency. Nepal's digital landscape has evolved dramatically—businesses from Kathmandu to Pokhara now compete both locally and globally for online visibility.
-          </p>
-          <blockquote>
-            <strong>What Defines an SEO Expert?</strong> An SEO specialist improves website visibility through technical optimization, strategic content, and data-driven analysis. In Nepal, they combine global best practices with deep understanding of local search behavior.
-          </blockquote>
-        </section>
+    <div class="article-body">
+      <section id="introduction">
+        <p>
+          Finding the <strong>best SEO expert in Nepal</strong> in 2026 requires understanding not just technical skills, but also local market expertise, proven results, and authentic pricing transparency. Nepal's digital landscape has evolved dramatically—businesses from Kathmandu to Pokhara now compete both locally and globally for online visibility.
+        </p>
+        <blockquote>
+          <strong>What Defines an SEO Expert?</strong> An SEO specialist improves website visibility through technical optimization, strategic content, and data-driven analysis. In Nepal, they combine global best practices with deep understanding of local search behavior.
+        </blockquote>
+      </section>
 
-        <section id="why-need">
-          <h2>Why Your Nepalese Business Needs an SEO Expert in 2026</h2>
-          <p>
-            SEO has shifted from optional marketing tactic to business necessity. A skilled SEO expert delivers:
-          </p>
-          <ul>
-            <li><strong>Increased organic visibility:</strong> Rank higher for keywords your customers search for.</li>
-            <li><strong>Qualified traffic generation:</strong> Attract visitors with genuine purchase intent.</li>
-            <li><strong>Conversion optimization:</strong> Transform visitors into paying customers.</li>
-          </ul>
+      <section id="why-need">
+        <h2>Why Your Nepalese Business Needs an SEO Expert in 2026</h2>
+        <p>
+          SEO has shifted from optional marketing tactic to business necessity. A skilled SEO expert delivers:
+        </p>
+        <ul>
+          <li><strong>Increased organic visibility:</strong> Rank higher for keywords your customers search for.</li>
+          <li><strong>Qualified traffic generation:</strong> Attract visitors with genuine purchase intent.</li>
+          <li><strong>Conversion optimization:</strong> Transform visitors into paying customers.</li>
+        </ul>
 
-          <div class="content-image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="SEO performance analytics" width="1200" height="800" loading="lazy" />
-          </div>
-
-          <h3 id="local-benefits">Strategic Benefits of Hiring a Local SEO Expert in Nepal</h3>
-          <p>
-            Local specialists understand nuanced differences in strategy execution:
-          </p>
-          <ul>
-            <li><strong>Nepalese consumer search patterns:</strong> Understanding how local audiences search.</li>
-            <li><strong>Strategic bilingual optimization:</strong> Balancing Nepali and English keywords.</li>
-            <li><strong>Cultural relevance:</strong> Aligning strategies with Nepali festivals and traditions.</li>
-          </ul>
-        </section>
-
-        <section id="qualities">
-          <h2>Essential Qualities Distinguishing Top SEO Experts in Nepal</h2>
-          
-          <div class="strategy-card">
-            <h3>1. Comprehensive Technical SEO Mastery</h3>
-            <ul>
-              <li><strong>Website architecture optimization</strong></li>
-              <li><strong>Core Web Vitals expertise</strong></li>
-              <li><strong>Advanced structured data implementation</strong></li>
-            </ul>
-          </div>
-
-          <div class="strategy-card">
-            <h3>2. Verified Track Record</h3>
-            <p>Demand concrete evidence of past success with measurable KPIs and sustainable results.</p>
-          </div>
-        </section>
-
-        <section id="pricing">
-          <h2>Authentic Cost Breakdown: SEO Pricing in Nepal (2026)</h2>
-          <table>
-            <thead>
-              <tr>
-                <th>Service Package</th>
-                <th>Monthly Cost (NPR)</th>
-                <th>Included Services</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Basic Local SEO</strong></td>
-                <td>20,000 - 35,000</td>
-                <td>GBP optimization, basic on-page, monthly report</td>
-              </tr>
-              <tr>
-                <td><strong>Standard SEO</strong></td>
-                <td>40,000 - 75,000</td>
-                <td>Technical audit, on-page, content, link building</td>
-              </tr>
-              <tr>
-                <td><strong>Advanced SEO</strong></td>
-                <td>80,000 - 120,000</td>
-                <td>Full strategy, aggressive link building, conversion optimization</td>
-              </tr>
-              <tr>
-                <td><strong>Enterprise SEO</strong></td>
-                <td>125,000+</td>
-                <td>Custom strategy, extensive content & PR, advanced analytics</td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
-
-        <div class="cta-box" id="contact">
-          <h2>Transform Your Business with Data-Driven SEO Expertise</h2>
-          <p>
-            As a certified SEO specialist in Nepal, I help businesses achieve measurable, sustainable results through ethical, transparent strategies.
-          </p>
-          <a href="/services/#contact" class="btn-primary">Get Free SEO Consultation</a>
+        <div class="content-image">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80" alt="SEO performance analytics" width="1200" height="800" loading="lazy" />
         </div>
 
-      </article>
+        <h3 id="local-benefits">Strategic Benefits of Hiring a Local SEO Expert in Nepal</h3>
+        <p>
+          Local specialists understand nuanced differences in strategy execution:
+        </p>
+        <ul>
+          <li><strong>Nepalese consumer search patterns:</strong> Understanding how local audiences search.</li>
+          <li><strong>Strategic bilingual optimization:</strong> Balancing Nepali and English keywords.</li>
+          <li><strong>Cultural relevance:</strong> Aligning strategies with Nepali festivals and traditions.</li>
+        </ul>
+      </section>
+
+      <section id="qualities">
+        <h2>Essential Qualities Distinguishing Top SEO Experts in Nepal</h2>
+        
+        <div class="strategy-card">
+          <h3>1. Comprehensive Technical SEO Mastery</h3>
+          <ul>
+            <li><strong>Website architecture optimization</strong></li>
+            <li><strong>Core Web Vitals expertise</strong></li>
+            <li><strong>Advanced structured data implementation</strong></li>
+          </ul>
+        </div>
+
+        <div class="strategy-card">
+          <h3>2. Verified Track Record</h3>
+          <p>Demand concrete evidence of past success with measurable KPIs and sustainable results.</p>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <h2>Authentic Cost Breakdown: SEO Pricing in Nepal (2026)</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Service Package</th>
+              <th>Monthly Cost (NPR)</th>
+              <th>Included Services</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Basic Local SEO</strong></td>
+              <td>20,000 - 35,000</td>
+              <td>GBP optimization, basic on-page, monthly report</td>
+            </tr>
+            <tr>
+              <td><strong>Standard SEO</strong></td>
+              <td>40,000 - 75,000</td>
+              <td>Technical audit, on-page, content, link building</td>
+            </tr>
+            <tr>
+              <td><strong>Advanced SEO</strong></td>
+              <td>80,000 - 120,000</td>
+              <td>Full strategy, aggressive link building, conversion optimization</td>
+            </tr>
+            <tr>
+              <td><strong>Enterprise SEO</strong></td>
+              <td>125,000+</td>
+              <td>Custom strategy, extensive content & PR, advanced analytics</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <div class="cta-box" id="contact">
+        <h2>Transform Your Business with Data-Driven SEO Expertise</h2>
+        <p>
+          As a certified SEO specialist in Nepal, I help businesses achieve measurable, sustainable results through ethical, transparent strategies.
+        </p>
+        <a href="/contact/" class="btn-primary">Get Free SEO Consultation</a>
+      </div>
     </div>
-  </div>
+  </main>
 
-
-<footer role="contentinfo">
+<footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
@@ -351,11 +261,12 @@
   <div class="whatsapp-container">
     <span class="whatsapp-label">Chat on WhatsApp</span>
     <a href="https://wa.me/9779708141147" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Open WhatsApp chat">
-      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32">
-        <path fill="#FFF" d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
+      <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="32" height="32" style="fill:#fff;">
+        <path d="M16 0C7.164 0 0 7.163 0 16c0 2.825.742 5.598 2.148 8.019L.056 31.97l8.164-2.139C10.588 31.242 13.265 32 16 32c8.836 0 16-7.163 16-16S24.836 0 16 0zm0 29.333c-2.47 0-4.89-.66-6.988-1.914l-.502-.298-5.196 1.362 1.386-5.065-.327-.518C2.739 20.86 2 18.463 2 16 2 8.268 8.268 2 16 2s14 6.268 14 14-6.268 14-14 14zm7.684-10.548c-.421-.211-2.491-1.229-2.877-1.37-.386-.14-.667-.21-.948.211-.281.421-1.089 1.37-1.335 1.651-.246.281-.491.316-.912.105-.421-.211-1.777-.654-3.385-2.086-1.251-1.114-2.096-2.49-2.342-2.911-.246-.421-.026-.649.185-.858.189-.188.421-.491.631-.737.211-.246.281-.421.421-.702.141-.281.07-.526-.035-.737-.105-.211-.948-2.283-1.3-3.127-.342-.822-.69-.71-.948-.724-.246-.012-.526-.015-.807-.015s-.737.105-1.123.526c-.386.421-1.474 1.44-1.474 3.512s1.509 4.074 1.72 4.355c.211.281 2.966 4.529 7.188 6.352 1.003.433 1.786.691 2.396.885 0 0 0 0 0 0 2.273.699 3.531.603 4.273.507.691-.089 2.491-1.018 2.846-2.003.352-.982.352-1.826.246-2.003-.105-.175-.386-.281-.807-.492z"/>
       </svg>
     </a>
   </div>
+
   <script>
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('nav ul');
@@ -366,5 +277,6 @@
       });
     }
   </script>
+  <script src="/js/main.js" defer></script>
 </body>
 </html>

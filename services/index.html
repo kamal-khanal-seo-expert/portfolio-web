@@ -43,7 +43,7 @@
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-<header role="banner">
+<header>
   <div class="container header-inner">
     <a href="/" class="logo">Kamal Khanal</a>
     <button class="hamburger" aria-label="Toggle navigation">
@@ -51,15 +51,14 @@
       <span></span>
       <span></span>
     </button>
-    <nav role="navigation" aria-label="Main navigation">
+    <nav>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/services/">Services</a></li>
-        <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="/contact/">Contact</a></li>
       </ul>
     </nav>
     <a href="https://calendly.com/mr-kamalkhanal" class="btn-primary">Get Free Consultation</a>
@@ -68,9 +67,9 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <section class="hero" role="banner" aria-labelledby="hero-title">
+  <section class="hero">
     <div class="container">
-      <h1 id="hero-title">SEO Services That Actually Move the Needle</h1>
+      <h1 class="section-title">SEO Services That Actually <span class="text-gradient">Move the Needle</span></h1>
       <p>
         From technical fixes and Core Web Vitals to entity optimization and AI-ready content—get
         comprehensive SEO services designed for sustainable organic growth.
@@ -78,213 +77,227 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <main id="main" class="container">
-    <section class="intro-text">
-      <h2>What I Offer as Your SEO Specialist</h2>
-      <p>
-        Whether you need a one-time audit or ongoing optimization, every service is built around
-        technical excellence and semantic relevance.
-      </p>
+  <main id="main">
+    <section class="intro-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">What I Offer as Your SEO Specialist</h2>
+          <p class="section-sub">
+            Whether you need a one-time audit or ongoing optimization, every service is built around
+            technical excellence and semantic relevance.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <section class="services-grid" aria-label="SEO Services Offered">
-      <article class="card" id="technical-seo">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-        <h3>Technical SEO Audit & Optimization</h3>
-        <p>Comprehensive technical analysis and fixes including Core Web Vitals and crawlability.</p>
-        <ul>
-          <li>Core Web Vitals (LCP, CLS, INP)</li>
-          <li>Crawlability and indexation analysis</li>
-          <li>Schema markup implementation</li>
-          <li>Site architecture and URL structure</li>
-        </ul>
+    <section class="services-section">
+      <div class="container">
+        <div class="grid-3">
+          <article class="card service-card" id="technical-seo">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+            <span class="pill">Technical</span>
+            <h3>Technical SEO Audit & Optimization</h3>
+            <p>Comprehensive technical analysis and fixes including Core Web Vitals and crawlability.</p>
+            <ul class="service-features">
+              <li>Core Web Vitals (LCP, CLS, INP)</li>
+              <li>Crawlability and indexation analysis</li>
+              <li>Schema markup implementation</li>
+              <li>Site architecture and URL structure</li>
+            </ul>
+          </article>
 
-      </article>
+          <article class="card service-card" id="local-seo">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+            <span class="pill">Local</span>
+            <h3>Local SEO Services Nepal</h3>
+            <p>Complete local search optimization to help Nepal-based businesses dominate local SERPs.</p>
+            <ul class="service-features">
+              <li>Google Business Profile setup</li>
+              <li>Local citation building</li>
+              <li>Review management strategy</li>
+              <li>Location-based content creation</li>
+            </ul>
+          </article>
 
-      <article class="card" id="local-seo">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h3>Local SEO Services Nepal</h3>
-        <p>Complete local search optimization to help Nepal-based businesses dominate local SERPs.</p>
-        <ul>
-          <li>Google Business Profile setup</li>
-          <li>Local citation building</li>
-          <li>Review management strategy</li>
-          <li>Location-based content creation</li>
-        </ul>
+          <article class="card service-card" id="entity-seo">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54Z"/></svg></div>
+            <span class="pill">Semantic</span>
+            <h3>Entity-Based & Semantic SEO</h3>
+            <p>Advanced semantic optimization mapping your brand and topics as entities.</p>
+            <ul class="service-features">
+              <li>Entity mapping & knowledge graph</li>
+              <li>Semantic keyword research</li>
+              <li>Topical authority building</li>
+              <li>Entity-rich content optimization</li>
+            </ul>
+          </article>
 
-      </article>
+          <article class="card service-card" id="geo-aeo">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg></div>
+            <span class="pill">AI Search</span>
+            <h3>GEO & AEO Optimization</h3>
+            <p>Optimize your content for AI search platforms (ChatGPT, Perplexity) and answer engines.</p>
+            <ul class="service-features">
+              <li>Content structuring for AI citation</li>
+              <li>Answer-first formatting</li>
+              <li>FAQ schema optimization</li>
+              <li>People Also Ask (PAA) targeting</li>
+            </ul>
+          </article>
 
-      <article class="card" id="entity-seo">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-2.54Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-2.54Z"/></svg></div>
-        <h3>Entity-Based & Semantic SEO</h3>
-        <p>Advanced semantic optimization mapping your brand and topics as entities.</p>
-        <ul>
-          <li>Entity mapping & knowledge graph</li>
-          <li>Semantic keyword research</li>
-          <li>Topical authority building</li>
-          <li>Entity-rich content optimization</li>
-        </ul>
+          <article class="card service-card" id="content-strategy">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg></div>
+            <span class="pill">Content</span>
+            <h3>SEO Content Strategy</h3>
+            <p>Strategic content planning and optimization aligned with search intent and user needs.</p>
+            <ul class="service-features">
+              <li>Keyword research and intent mapping</li>
+              <li>Content pillar strategy</li>
+              <li>E-E-A-T focused creation</li>
+              <li>Content gap analysis</li>
+            </ul>
+          </article>
 
-      </article>
-
-      <article class="card" id="geo-aeo">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg></div>
-        <h3>GEO & AEO Optimization</h3>
-        <p>Optimize your content for AI search platforms (ChatGPT, Perplexity) and answer engines.</p>
-        <ul>
-          <li>Content structuring for AI citation</li>
-          <li>Answer-first formatting</li>
-          <li>FAQ schema optimization</li>
-          <li>People Also Ask (PAA) targeting</li>
-        </ul>
-
-      </article>
-
-      <article class="card" id="content-strategy">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/><path d="m15 5 4 4"/></svg></div>
-        <h3>SEO Content Strategy</h3>
-        <p>Strategic content planning and optimization aligned with search intent and user needs.</p>
-        <ul>
-          <li>Keyword research and intent mapping</li>
-          <li>Content pillar strategy</li>
-          <li>E-E-A-T focused creation</li>
-          <li>Content gap analysis</li>
-        </ul>
-
-      </article>
-
-      <article class="card" id="link-building">
-        <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--secondary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="service-svg"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
-        <h3>White-Hat Link Building</h3>
-        <p>Ethical backlink acquisition through digital PR and content marketing.</p>
-        <ul>
-          <li>Digital PR outreach</li>
-          <li>Guest posting on authority sites</li>
-          <li>Linkable asset creation</li>
-          <li>Competitor backlink analysis</li>
-        </ul>
-
-      </article>
+          <article class="card service-card" id="link-building">
+            <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+            <span class="pill">Authority</span>
+            <h3>White-Hat Link Building</h3>
+            <p>Ethical backlink acquisition through digital PR and content marketing.</p>
+            <ul class="service-features">
+              <li>Digital PR outreach</li>
+              <li>Guest posting on authority sites</li>
+              <li>Linkable asset creation</li>
+              <li>Competitor backlink analysis</li>
+            </ul>
+          </article>
+        </div>
+      </div>
     </section>
 
     <section class="pricing-section">
-      <div class="pricing-intro">
-        <h2>Investment Options</h2>
-        <p>Transparent pricing designed for different needs and budgets.</p>
-      </div>
-      <div class="grid-3" style="align-items: center;">
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-          <span class="pricing-tag" style="display: inline-block; background: var(--bg-soft); color: var(--muted); padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 12px; border: 1px solid var(--border);">One-Time</span>
-          <h3>SEO Audit & Strategy</h3>
-          <p class="price" style="font-size: 18px; font-weight: bold; color: var(--primary); margin-bottom: 20px;">Starting at NPR 15,000</p>
-          <ul style="flex-grow: 1; padding-left: 20px;">
-            <li style="margin-bottom: 8px;">Comprehensive technical SEO audit</li>
-            <li style="margin-bottom: 8px;">Content and entity gap analysis</li>
-            <li style="margin-bottom: 8px;">Prioritized action plan</li>
-          </ul>
-          <a href="/contact/" class="btn-outline" style="width:100%;justify-content:center;margin-top: 20px;">Get Started</a>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Investment Options</h2>
+          <p class="section-sub">Transparent pricing designed for different needs and budgets.</p>
         </div>
-        <div class="card" style="border: 2px solid var(--primary); transform: scale(1.05); box-shadow: var(--shadow-md); position: relative; z-index: 1; display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-          <span class="pricing-tag" style="position: absolute; top: -14px; right: 20px; background: var(--warning); color: var(--primary); padding: 4px 12px; border-radius: 999px; font-size: 12px; font-weight: bold; border: 1px solid var(--warning);">Most Popular</span>
-          <h3>Monthly SEO Optimization</h3>
-          <p class="price" style="font-size: 18px; font-weight: bold; color: var(--primary); margin-bottom: 20px;">Starting at NPR 25,000/month</p>
-          <ul style="flex-grow: 1; padding-left: 20px;">
-            <li style="margin-bottom: 8px;">Ongoing technical optimization</li>
-            <li style="margin-bottom: 8px;">Content creation & optimization</li>
-            <li style="margin-bottom: 8px;">Link building included</li>
-          </ul>
-          <a href="/contact/" class="btn-primary" style="width:100%;justify-content:center;margin-top: 20px;">Get Started</a>
-        </div>
-        <div class="card" style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-          <span class="pricing-tag" style="display: inline-block; background: var(--bg-soft); color: var(--muted); padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: bold; margin-bottom: 12px; border: 1px solid var(--border);">Enterprise</span>
-          <h3>Custom SEO Solutions</h3>
-          <p class="price" style="font-size: 18px; font-weight: bold; color: var(--primary); margin-bottom: 20px;">Custom pricing</p>
-          <ul style="flex-grow: 1; padding-left: 20px;">
-            <li style="margin-bottom: 8px;">Multi-site or large-scale SEO</li>
-            <li style="margin-bottom: 8px;">International SEO</li>
-            <li style="margin-bottom: 8px;">Dedicated support</li>
-          </ul>
-          <a href="/contact/" class="btn-outline" style="width:100%;justify-content:center;margin-top: 20px;">Contact Me</a>
+        <div class="grid-3 pricing-grid">
+          <div class="card pricing-card">
+            <span class="pill">One-Time</span>
+            <h3>SEO Audit & Strategy</h3>
+            <p class="price">Starting at NPR 15,000</p>
+            <ul class="pricing-features">
+              <li>Comprehensive technical SEO audit</li>
+              <li>Content and entity gap analysis</li>
+              <li>Prioritized action plan</li>
+            </ul>
+            <a href="/contact/" class="btn-outline">Get Started</a>
+          </div>
+          <div class="card pricing-card popular">
+            <span class="pill popular-pill">Most Popular</span>
+            <h3>Monthly SEO Optimization</h3>
+            <p class="price">Starting at NPR 25,000/month</p>
+            <ul class="pricing-features">
+              <li>Ongoing technical optimization</li>
+              <li>Content creation & optimization</li>
+              <li>Link building included</li>
+            </ul>
+            <a href="/contact/" class="btn-primary">Get Started</a>
+          </div>
+          <div class="card pricing-card">
+            <span class="pill">Enterprise</span>
+            <h3>Custom SEO Solutions</h3>
+            <p class="price">Custom pricing</p>
+            <ul class="pricing-features">
+              <li>Multi-site or large-scale SEO</li>
+              <li>International SEO</li>
+              <li>Dedicated support</li>
+            </ul>
+            <a href="/contact/" class="btn-outline">Contact Me</a>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="process-section">
-      <div class="process-intro">
-        <h2>How We'll Work Together</h2>
-      </div>
-      <div class="grid-3">
-        <div class="card" style="text-align:center;">
-          <div class="step-number" style="width:48px;height:48px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:700;margin:0 auto 14px;">1</div>
-          <h3>Discovery Call</h3>
-          <p>Understanding your business, goals, and challenges.</p>
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">How We'll Work Together</h2>
         </div>
-        <div class="card" style="text-align:center;">
-          <div class="step-number" style="width:48px;height:48px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:700;margin:0 auto 14px;">2</div>
-          <h3>Audit & Strategy</h3>
-          <p>Comprehensive analysis and roadmap creation.</p>
-        </div>
-        <div class="card" style="text-align:center;">
-          <div class="step-number" style="width:48px;height:48px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:20px;font-weight:700;margin:0 auto 14px;">3</div>
-          <h3>Implementation</h3>
-          <p>Execution of fixes, content, and link building.</p>
+        <div class="grid-3 process-grid">
+          <div class="card process-card">
+            <div class="step-number">1</div>
+            <h3>Discovery Call</h3>
+            <p>Understanding your business, goals, and challenges.</p>
+          </div>
+          <div class="card process-card">
+            <div class="step-number">2</div>
+            <h3>Audit & Strategy</h3>
+            <p>Comprehensive analysis and roadmap creation.</p>
+          </div>
+          <div class="card process-card">
+            <div class="step-number">3</div>
+            <h3>Implementation</h3>
+            <p>Execution of fixes, content, and link building.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="contact-section" id="contact" style="padding: 80px 0;">
+    <section class="contact-section" id="contact">
       <div class="container">
         <div class="section-header">
           <h2 class="section-title">Ready to Start Growing?</h2>
-          <p>Fill out the form below for a free consultation.</p>
+          <p class="section-sub">Fill out the form below for a free consultation.</p>
         </div>
 
-        <form action="https://formspree.io/f/mykkgbjy" method="POST" style="max-width: 800px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-          <div style="display:flex; flex-direction:column;">
-            <label style="font-size:14px;font-weight:600;margin-bottom:6px;">Your Name *</label>
-            <input type="text" name="name" placeholder="John Doe" required style="padding:12px 16px;border:1px solid var(--border);border-radius:8px;" />
-          </div>
-          <div style="display:flex; flex-direction:column;">
-            <label style="font-size:14px;font-weight:600;margin-bottom:6px;">Email Address *</label>
-            <input type="email" name="email" placeholder="john@example.com" required style="padding:12px 16px;border:1px solid var(--border);border-radius:8px;" />
-          </div>
-          <div style="display:flex; flex-direction:column;">
-            <label style="font-size:14px;font-weight:600;margin-bottom:6px;">Phone Number</label>
-            <input type="tel" name="phone" placeholder="+977 980-1234567" style="padding:12px 16px;border:1px solid var(--border);border-radius:8px;" />
-          </div>
-          <div style="display:flex; flex-direction:column;">
-            <label style="font-size:14px;font-weight:600;margin-bottom:6px;">Website URL</label>
-            <input type="url" name="website" placeholder="https://example.com" style="padding:12px 16px;border:1px solid var(--border);border-radius:8px;" />
-          </div>
-          <div style="grid-column: 1 / -1; display:flex; flex-direction:column;">
-            <label style="font-size:14px;font-weight:600;margin-bottom:6px;">Service Interested In *</label>
-            <select name="service" required style="padding:12px 16px;border:1px solid var(--border);border-radius:8px;">
-              <option value="">-- Select a service --</option>
-              <option value="seo-audit">SEO Audit & Strategy</option>
-              <option value="monthly-seo">Monthly SEO Optimization</option>
-              <option value="technical-seo">Technical SEO</option>
-              <option value="local-seo">Local SEO</option>
-            </select>
-          </div>
-          <div style="grid-column: 1 / -1; display:flex; flex-direction:column;">
-            <label style="font-size:14px;font-weight:600;margin-bottom:6px;">Tell Me About Your Goals *</label>
-            <textarea name="message" placeholder="What are your goals?" required style="padding:12px 16px;border:1px solid var(--border);border-radius:8px; height: 120px;"></textarea>
-          </div>
-          <div style="grid-column: 1 / -1;">
-            <button type="submit" class="btn-primary" style="width:100%;">Send Message</button>
+        <form action="https://formspree.io/f/mykkgbjy" method="POST" class="contact-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" name="name" placeholder="John Doe" required />
+            </div>
+            <div class="form-group">
+              <label>Email Address *</label>
+              <input type="email" name="email" placeholder="john@example.com" required />
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" name="phone" placeholder="+977 980-1234567" />
+            </div>
+            <div class="form-group">
+              <label>Website URL</label>
+              <input type="url" name="website" placeholder="https://example.com" />
+            </div>
+            <div class="form-group full-width">
+              <label>Service Interested In *</label>
+              <select name="service" required>
+                <option value="">-- Select a service --</option>
+                <option value="seo-audit">SEO Audit & Strategy</option>
+                <option value="monthly-seo">Monthly SEO Optimization</option>
+                <option value="technical-seo">Technical SEO</option>
+                <option value="local-seo">Local SEO</option>
+              </select>
+            </div>
+            <div class="form-group full-width">
+              <label>Tell Me About Your Goals *</label>
+              <textarea name="message" placeholder="What are your goals?" required></textarea>
+            </div>
+            <div class="form-group full-width">
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
           </div>
         </form>
 
-        <div style="display:flex;justify-content:center;gap:32px;margin-top:24px;font-size:13px;color:var(--muted);flex-wrap:wrap;">
-          <span>✓ Free consultation included</span>
-          <span>✓ Response within 24 hours</span>
-          <span>✓ No obligation</span>
+        <div class="form-badges">
+          <span class="badge">✓ Free consultation included</span>
+          <span class="badge">✓ Response within 24 hours</span>
+          <span class="badge">✓ No obligation</span>
         </div>
       </div>
     </section>
   </main>
 
-<footer role="contentinfo">
+<footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">

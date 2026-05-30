@@ -44,7 +44,7 @@
 
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-<header role="banner">
+<header>
   <div class="container header-inner">
     <a href="/" class="logo">Kamal Khanal</a>
     <button class="hamburger" aria-label="Toggle navigation">
@@ -52,12 +52,11 @@
       <span></span>
       <span></span>
     </button>
-    <nav role="navigation" aria-label="Main navigation">
+    <nav>
       <ul>
         <li><a href="/">Home</a></li>
         <li><a href="/about/">About</a></li>
         <li><a href="/services/">Services</a></li>
-        <li><a href="/tools/keyword-clusterer/" style="font-weight: bold; color: #FACC15;">Free SEO Tool</a></li>
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/case-studies/">Case Studies</a></li>
         <li><a href="/contact/">Contact</a></li>
@@ -69,23 +68,23 @@
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M827N69M"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-  <section class="hero" role="banner" aria-labelledby="about-title">
-    <div class="container hero-grid">
+  <section class="hero">
+    <div class="container grid-2">
       <div>
-        <h1 id="about-title">Hi, I'm <span class="text-gradient">Kamal Khanal</span></h1>
-        <p class="hero-lede">
+        <h1 class="section-title">Hi, I'm <span class="text-gradient">Kamal Khanal</span></h1>
+        <p>
           I'm an SEO specialist based in Nepal, and I'm passionate about helping businesses turn search visibility into sustainable, long-term growth.
         </p>
-        <div style="margin-top: 30px;">
-          <p class="hero-meta" style="margin-bottom: 20px;">
+        <div class="hero-content">
+          <p>
             My journey in SEO started over a year ago. What began as a deep curiosity about how search engines rank information quickly became an obsession with technical problem-solving and semantic strategy. Today, I partner with local businesses in Nepal and international brands to fix complex technical issues and build content strategies that algorithms and real people love.
           </p>
-          <p class="hero-meta">
+          <p>
             I don't believe in "black-box" tactics or shortcuts. Instead, I focus on the core fundamentals that endure algorithm updates: a perfectly healthy technical foundation, clear entity mapping, and delivering the best possible answer to the user's query. My goal is to make your organic traffic a dependable, predictable channel.
           </p>
         </div>
 
-        <div style="margin: 30px 0; display: flex; flex-wrap: wrap; gap: 12px;">
+        <div class="hero-pills">
           <span class="pill">Technical SEO</span>
           <span class="pill">Entity SEO</span>
           <span class="pill">Local SEO</span>
@@ -93,54 +92,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="pill">GEO & AEO</span>
         </div>
 
-        <div class="hero-actions" style="margin-top: 40px; display: flex; gap: 16px;">
+        <div class="hero-actions">
           <a href="/services/" class="btn-primary">View My Services</a>
           <a href="/contact/" class="btn-outline">Get in Touch</a>
         </div>
       </div>
-      <aside class="hero-media" aria-label="Photo of Kamal Khanal">
-        <div class="hero-photo glow-img" style="border-radius: 50%; border: 4px solid var(--border);">
+      <aside class="hero-media">
+        <div class="hero-photo">
           <img
             src="/assets/about-me-kamal-khanal.webp"
             width="400"
             height="400"
             loading="eager"
             alt="Kamal Khanal, SEO specialist in Nepal"
-            style="object-fit: cover; border-radius: 50%;"
           />
         </div>
       </aside>
     </div>
   </section>
 
-  <main id="main" class="container" style="padding-bottom: 120px;">
+  <main id="main">
     <section class="about-section">
-      <div class="section-header">
-        <p class="section-eyebrow">Proven Results</p>
-        <h2 style="text-align: center; margin-bottom: 40px;">Experience & Credentials</h2>
-      </div>
-      <div class="grid-3" style="margin-bottom: 80px;">
-        <div class="result"><strong>1+ Year</strong><span>Dedicated SEO Experience</span></div>
-        <div class="result"><strong>30+</strong><span>Successful Projects</span></div>
-        <div class="result"><strong>95%</strong><span>Client Satisfaction Rate</span></div>
-      </div>
-      
-      <div style="max-width: 850px; margin: 0 auto; text-align: center; font-size: 18px; line-height: 1.8; color: var(--muted);">
-        <p>
-          My hands-on experience ranges from auditing large e-commerce sites to restructuring the local presence of retail brands. I continually refine my skills in advanced Technical SEO and Semantic Optimization, staying ahead of the curve with AI-driven search trends to future-proof my clients' websites.
-        </p>
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">Proven Results</span>
+          <h2 class="section-title">Experience & Credentials</h2>
+        </div>
+        <div class="grid-3 stats-grid">
+          <div class="card stat-card">
+            <strong class="text-gradient">1+ Year</strong>
+            <span>Dedicated SEO Experience</span>
+          </div>
+          <div class="card stat-card">
+            <strong class="text-gradient">30+</strong>
+            <span>Successful Projects</span>
+          </div>
+          <div class="card stat-card">
+            <strong class="text-gradient">95%</strong>
+            <span>Client Satisfaction Rate</span>
+          </div>
+        </div>
+        
+        <div class="section-footer">
+          <p>
+            My hands-on experience ranges from auditing large e-commerce sites to restructuring the local presence of retail brands. I continually refine my skills in advanced Technical SEO and Semantic Optimization, staying ahead of the curve with AI-driven search trends to future-proof my clients' websites.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
   
-<footer role="contentinfo">
+<footer>
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
         <p class="footer-title">About Kamal Khanal</p>
         <p>SEO specialist in Nepal focused on technical SEO, entity optimization, and sustainable organic growth strategies for businesses worldwide.</p>
-        <div class="footer-social" style="margin-top: 30px; display: flex; gap: 20px;">
+        <div class="footer-social">
           <a href="https://www.linkedin.com/in/kamalkhanal" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://x.com/seo_kamalkhanal" target="_blank" rel="noopener">Twitter</a>
         </div>
@@ -175,7 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </ul>
       </div>
     </div>
-    <div class="footer-bottom" style="margin-top: 60px; padding-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); text-align: center;">© 2026 Kamal Khanal – SEO Specialist in Nepal. All rights reserved.</div>
+    <div class="footer-bottom">© 2026 Kamal Khanal – SEO Specialist in Nepal. All rights reserved.</div>
   </div>
 </footer>
 
